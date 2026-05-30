@@ -26,7 +26,7 @@ export function ContactHero() {
           <h1 className="mb-4 text-3xl font-black leading-tight md:text-5xl lg:text-6xl uppercase tracking-tight [text-shadow:_0_1px_20px_rgb(0_0_0_/_60%)]">
             GET IN <span className="text-iptv-green">TOUCH</span>
           </h1>
-          <p className="mx-auto max-w-xl text-xs text-gray-300 md:text-sm uppercase tracking-wider leading-relaxed">
+          <p className="mx-auto max-w-xl text-sm text-gray-300 md:text-sm uppercase tracking-wider leading-relaxed">
             We're here to help 24/7. Contact our expert support team for assistance with installation, 
             troubleshooting, or any questions about our IPTV service.
           </p>

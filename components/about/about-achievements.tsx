@@ -35,7 +35,7 @@ export function Achievements() {
           <h2 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
             OUR <span className="text-iptv-green">ACHIEVEMENTS</span>
           </h2>
-          <p className="mx-auto max-w-xl text-xs text-gray-500">
+          <p className="mx-auto max-w-xl text-sm text-gray-500">
             Numbers that speak to our commitment to excellence and customer satisfaction.
           </p>
         </div>

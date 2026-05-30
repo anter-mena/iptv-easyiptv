@@ -19,7 +19,7 @@ const StepList = ({ steps }: { steps: any[] }) => (
  {step.tag}
  </span>
  )}
- <h6 className="text-xs font-bold text-gray-900">{step.title}</h6>
+ <h6 className="text-sm font-bold text-gray-900">{step.title}</h6>
  {step.desc && <p className="mt-1 text-[11px] leading-relaxed text-gray-500">{step.desc}</p>}
  
  {step.bullets && (
@@ -100,7 +100,7 @@ export function InstallationAndroidTv() {
  <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
  Android TV/Box <span className="text-iptv-green">Setup</span>
  </h3>
- <p className="mx-auto max-w-xl text-xs uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
+ <p className="mx-auto max-w-xl text-sm uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
  Compatible devices: Sony, TCL, Hisense, Philips, Nvidia Shield, Chromecast with Google TV, Mi Box, and most Android TV boxes
  </p>
  </div>
@@ -114,12 +114,12 @@ export function InstallationAndroidTv() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-900">Setup Time</h4>
- <p className="text-xs font-bold text-gray-500 mt-0.5">Quick Setup - 3-5 minutes</p>
+ <p className="text-sm font-bold text-gray-500 mt-0.5">Quick Setup - 3-5 minutes</p>
  </div>
  </div>
  <div className="mt-4 pt-4 border-t border-gray-100 flex items-start space-x-3">
  <MonitorPlay className="h-4 w-4 text-gray-400 mt-0.5 shrink-0" />
- <p className="text-xs text-gray-500 font-medium">Using our custom V12Mate Player for easy setup</p>
+ <p className="text-sm text-gray-500 font-medium">Using our custom V12Mate Player for easy setup</p>
  </div>
  </div>
  </div>
@@ -227,8 +227,8 @@ export function InstallationAndroidTv() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-red-900 mb-2">Troubleshooting Login Issues</h5>
- <p className="text-xs text-red-800 leading-relaxed font-bold mb-2">If No Channels Load And Content Count Doesn't Show: Your login details are wrong.</p>
- <p className="text-xs text-red-700 leading-relaxed font-medium">Go to Settings → Playlists → V12Mate → Xtream Codes Parameters and double-check your username and password, including capital letters. If they're incorrect, no channels will appear.</p>
+ <p className="text-sm text-red-800 leading-relaxed font-bold mb-2">If No Channels Load And Content Count Doesn't Show: Your login details are wrong.</p>
+ <p className="text-sm text-red-700 leading-relaxed font-medium">Go to Settings → Playlists → V12Mate → Xtream Codes Parameters and double-check your username and password, including capital letters. If they're incorrect, no channels will appear.</p>
  </div>
  </div>
  </div>
@@ -240,7 +240,7 @@ export function InstallationAndroidTv() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2">EPG (Program Guide) Information</h5>
- <p className="text-xs text-gray-800 leading-relaxed font-medium">The EPG (guide information) loads in the background. Please give it some time, and you can view it in Settings → EPG.</p>
+ <p className="text-sm text-gray-800 leading-relaxed font-medium">The EPG (guide information) loads in the background. Please give it some time, and you can view it in Settings → EPG.</p>
  </div>
  </div>
  </div>
@@ -252,7 +252,7 @@ export function InstallationAndroidTv() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-yellow-900 mb-2">Security Settings Note</h5>
- <p className="text-xs text-yellow-800 leading-relaxed font-medium">You should go to Settings &gt; Security &amp; Restrictions, select the app, and toggle"Allow unknown apps" if installing from outside Play Store.</p>
+ <p className="text-sm text-yellow-800 leading-relaxed font-medium">You should go to Settings &gt; Security &amp; Restrictions, select the app, and toggle"Allow unknown apps" if installing from outside Play Store.</p>
  </div>
  </div>
  </div>
@@ -275,7 +275,7 @@ export function InstallationAndroidTv() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-900">Very Important</h4>
- <p className="text-xs font-bold text-gray-700 mt-0.5 leading-relaxed">VOD on TiviMate only works with their Premium. Our service (trial & subscription) already has VOD built in using V12Mate.</p>
+ <p className="text-sm font-bold text-gray-700 mt-0.5 leading-relaxed">VOD on TiviMate only works with their Premium. Our service (trial & subscription) already has VOD built in using V12Mate.</p>
  </div>
  </div>
  </div>
@@ -315,7 +315,7 @@ export function InstallationAndroidTv() {
  onClick={() => setOpenFaq(openFaq === i ? null : i)}
  className="flex w-full items-center justify-between px-6 py-4 text-left"
  >
- <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
+ <span className="text-sm font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
  <Plus className={cn(
 "h-4 w-4 text-iptv-green transition-transform duration-300",
  openFaq === i &&"rotate-45"
@@ -326,7 +326,7 @@ export function InstallationAndroidTv() {
  openFaq === i ?"max-h-40" :"max-h-0"
  )}>
  <div className="px-6 pb-6">
- <p className="text-xs leading-relaxed text-gray-500 font-medium">{faq.a}</p>
+ <p className="text-sm leading-relaxed text-gray-500 font-medium">{faq.a}</p>
  </div>
  </div>
  </div>

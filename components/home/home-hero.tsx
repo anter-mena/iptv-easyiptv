@@ -11,7 +11,7 @@ export function Hero() {
             PREMIUM IPTV SERVICE AT AN<br />
             <span className="text-iptv-green">UNBEATABLE PRICE</span>
           </h1>
-          <p className="mx-auto mb-8 max-w-4xl text-xs text-gray-300 md:text-sm uppercase tracking-wider leading-relaxed">
+          <p className="mx-auto mb-8 max-w-4xl text-sm text-gray-300 md:text-sm uppercase tracking-wider leading-relaxed">
             <span className="block md:hidden px-4">
               Experience unlimited entertainment<br />with over 20,000+ live channels<br />
               and 50,000+ VOD content in stunning<br />4K quality.
@@ -25,13 +25,13 @@ export function Hero() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="#pricing"
-              className="rounded-md bg-iptv-green px-6 py-2.5 text-xs font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
+              className="rounded-md bg-iptv-green px-6 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
             >
               Start Free Trial
             </Link>
             <Link
               href="#pricing"
-              className="rounded-md border border-white/20 bg-white/5 px-6 py-2.5 text-xs font-bold text-white backdrop-blur-sm transition-all hover:bg-white hover:text-gray-900"
+              className="rounded-md border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white hover:text-gray-900"
             >
               View Pricing
             </Link>
@@ -45,7 +45,7 @@ export function Hero() {
               <div key={`logo-${i}`} className="flex h-12 w-24 shrink-0 items-center justify-center px-4">
                 <Image
                   src={`https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@639e31403aeabe3b506c21bc02345a616a3da952/iptv/assets/${i}.svg`}
-                  alt={`Channel Logo ${i}`}
+                  alt={`Premium IPTV Live Channel Partner ${i}`}
                   width={96}
                   height={48}
                   className="brightness-0 invert opacity-40 transition-opacity hover:opacity-100 max-h-full max-w-full object-contain"

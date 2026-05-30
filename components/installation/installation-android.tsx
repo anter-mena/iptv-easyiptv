@@ -19,7 +19,7 @@ const StepList = ({ steps }: { steps: any[] }) => (
  {step.tag}
  </span>
  )}
- <h6 className="text-xs font-bold text-gray-900">{step.title}</h6>
+ <h6 className="text-sm font-bold text-gray-900">{step.title}</h6>
  {step.desc && <p className="mt-1 text-[11px] leading-relaxed text-gray-500">{step.desc}</p>}
  
  {step.bullets && (
@@ -94,7 +94,7 @@ export function InstallationAndroid() {
  <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
  Android Phone <span className="text-iptv-green">& Tablet Setup</span>
  </h3>
- <p className="mx-auto max-w-xl text-xs uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
+ <p className="mx-auto max-w-xl text-sm uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
  Compatible with: Android 5.0 or higher devices - phones and tablets
  </p>
  </div>
@@ -108,12 +108,12 @@ export function InstallationAndroid() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-900">Setup Time</h4>
- <p className="text-xs font-bold text-gray-500 mt-0.5">Quick Setup - 3 minutes</p>
+ <p className="text-sm font-bold text-gray-500 mt-0.5">Quick Setup - 3 minutes</p>
  </div>
  </div>
  <div className="mt-4 pt-4 border-t border-gray-100 flex items-start space-x-3">
  <Wifi className="h-4 w-4 text-gray-400 mt-0.5 shrink-0" />
- <p className="text-xs text-gray-500 font-medium">Requirements: Android 5.0 or higher, stable WiFi or 4G/5G connection</p>
+ <p className="text-sm text-gray-500 font-medium">Requirements: Android 5.0 or higher, stable WiFi or 4G/5G connection</p>
  </div>
  </div>
  </div>
@@ -128,7 +128,7 @@ export function InstallationAndroid() {
  <span className="flex h-6 px-3 items-center justify-center rounded bg-gray-900 text-[10px] font-bold text-white tracking-widest whitespace-nowrap min-w-[70px]">METHOD 01</span>
  <h4 className="text-xl font-bold text-gray-900 uppercase tracking-tight mb-2">iMPlayer Setup</h4>
  </div>
- <p className="text-xs text-gray-500 font-medium">The most user-friendly IPTV app for Android phones and tablets.</p>
+ <p className="text-sm text-gray-500 font-medium">The most user-friendly IPTV app for Android phones and tablets.</p>
  </div>
  
  <StepList steps={[
@@ -171,15 +171,15 @@ export function InstallationAndroid() {
  <span className="flex h-6 px-3 items-center justify-center rounded bg-gray-900 text-[10px] font-bold text-white tracking-widest whitespace-nowrap min-w-[70px]">METHOD 02</span>
  <h4 className="text-xl font-bold text-gray-900 uppercase tracking-tight mb-2">TiviMate Mobile Setup (Google Play)</h4>
  </div>
- <p className="text-xs text-gray-500 font-medium">Advanced IPTV player with professional features for Android users.</p>
+ <p className="text-sm text-gray-500 font-medium">Advanced IPTV player with professional features for Android users.</p>
  </div>
  
  <div className="rounded-xl border border-iptv-green/20 bg-iptv-green/5 p-5 mb-6">
  <div className="flex space-x-3">
  <AlertCircle className="h-5 w-5 text-iptv-green shrink-0" />
  <div>
- <h5 className="text-xs font-black uppercase tracking-tight text-gray-900 mb-1">Very Important</h5>
- <p className="text-xs leading-relaxed text-gray-600">
+ <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-1">Very Important</h5>
+ <p className="text-sm leading-relaxed text-gray-600">
  VOD on TiviMate only works with their Premium. Our service (trial & subscription) already has VOD built in.
  </p>
  </div>
@@ -230,7 +230,7 @@ export function InstallationAndroid() {
  <span className="flex h-6 px-3 items-center justify-center rounded bg-gray-900 text-[10px] font-bold text-white tracking-widest whitespace-nowrap min-w-[70px]">METHOD 03</span>
  <h4 className="text-xl font-bold text-gray-900 uppercase tracking-tight mb-2">Official APK Installation</h4>
  </div>
- <p className="text-xs text-gray-500 font-medium">Use this if TiviMate doesn't appear in Play Store on your device.</p>
+ <p className="text-sm text-gray-500 font-medium">Use this if TiviMate doesn't appear in Play Store on your device.</p>
  </div>
 
  <StepList steps={[
@@ -266,7 +266,7 @@ export function InstallationAndroid() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2">Data Usage Tip</h5>
- <p className="text-xs text-gray-500 leading-relaxed font-medium">Use WiFi when possible. Streaming uses approximately 1GB per hour at standard quality, 3GB per hour at HD quality.</p>
+ <p className="text-sm text-gray-500 leading-relaxed font-medium">Use WiFi when possible. Streaming uses approximately 1GB per hour at standard quality, 3GB per hour at HD quality.</p>
  </div>
  </div>
  </div>
@@ -277,7 +277,7 @@ export function InstallationAndroid() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2">Battery Optimization</h5>
- <p className="text-xs text-gray-500 leading-relaxed font-medium">Streaming drains battery quickly. Consider disabling battery optimization for your IPTV app in Settings &gt; Battery &gt; App battery management.</p>
+ <p className="text-sm text-gray-500 leading-relaxed font-medium">Streaming drains battery quickly. Consider disabling battery optimization for your IPTV app in Settings &gt; Battery &gt; App battery management.</p>
  </div>
  </div>
  </div>
@@ -298,7 +298,7 @@ export function InstallationAndroid() {
  onClick={() => setOpenFaq(openFaq === i ? null : i)}
  className="flex w-full items-center justify-between px-6 py-4 text-left"
  >
- <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
+ <span className="text-sm font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
  <Plus className={cn(
 "h-4 w-4 text-iptv-green transition-transform duration-300",
  openFaq === i &&"rotate-45"
@@ -309,7 +309,7 @@ export function InstallationAndroid() {
  openFaq === i ?"max-h-40" :"max-h-0"
  )}>
  <div className="px-6 pb-6">
- <p className="text-xs leading-relaxed text-gray-500 font-medium">{faq.a}</p>
+ <p className="text-sm leading-relaxed text-gray-500 font-medium">{faq.a}</p>
  </div>
  </div>
  </div>

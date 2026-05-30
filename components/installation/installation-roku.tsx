@@ -19,7 +19,7 @@ const StepList = ({ steps }: { steps: any[] }) => (
  {step.tag}
  </span>
  )}
- <h6 className="text-xs font-bold text-gray-900">{step.title}</h6>
+ <h6 className="text-sm font-bold text-gray-900">{step.title}</h6>
  {step.desc && <p className="mt-1 text-[11px] leading-relaxed text-gray-500">{step.desc}</p>}
  
  {step.bullets && (
@@ -94,7 +94,7 @@ export function InstallationRoku() {
  <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
  Roku Device <span className="text-iptv-green">Setup</span>
  </h3>
- <p className="mx-auto max-w-xl text-xs uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
+ <p className="mx-auto max-w-xl text-sm uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
  Compatible with: All Roku devices including Roku TV, Roku Ultra, Roku Streaming Stick, and Roku Express
  </p>
  </div>
@@ -108,12 +108,12 @@ export function InstallationRoku() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-900">Setup Time</h4>
- <p className="text-xs font-bold text-gray-500 mt-0.5">Quick Setup - 5-7 minutes</p>
+ <p className="text-sm font-bold text-gray-500 mt-0.5">Quick Setup - 5-7 minutes</p>
  </div>
  </div>
  <div className="mt-4 pt-4 border-t border-gray-100 flex items-start space-x-3">
  <MonitorPlay className="h-4 w-4 text-gray-400 mt-0.5 shrink-0" />
- <p className="text-xs text-gray-500 font-medium">Hot Player app from Roku Channel Store</p>
+ <p className="text-sm text-gray-500 font-medium">Hot Player app from Roku Channel Store</p>
  </div>
  </div>
  </div>
@@ -246,7 +246,7 @@ export function InstallationRoku() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2">Streaming Quality Tip</h5>
- <p className="text-xs text-gray-600 leading-relaxed font-medium">For best streaming quality on Roku, ensure your device is connected to a stable internet connection with at least 25 Mbps for HD content and 50+ Mbps for 4K content.</p>
+ <p className="text-sm text-gray-600 leading-relaxed font-medium">For best streaming quality on Roku, ensure your device is connected to a stable internet connection with at least 25 Mbps for HD content and 50+ Mbps for 4K content.</p>
  </div>
  </div>
  </div>
@@ -267,7 +267,7 @@ export function InstallationRoku() {
  onClick={() => setOpenFaq(openFaq === i ? null : i)}
  className="flex w-full items-center justify-between px-6 py-4 text-left"
  >
- <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
+ <span className="text-sm font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
  <Plus className={cn(
 "h-4 w-4 text-iptv-green transition-transform duration-300",
  openFaq === i &&"rotate-45"
@@ -278,7 +278,7 @@ export function InstallationRoku() {
  openFaq === i ?"max-h-40" :"max-h-0"
  )}>
  <div className="px-6 pb-6">
- <p className="text-xs leading-relaxed text-gray-500 font-medium">{faq.a}</p>
+ <p className="text-sm leading-relaxed text-gray-500 font-medium">{faq.a}</p>
  </div>
  </div>
  </div>

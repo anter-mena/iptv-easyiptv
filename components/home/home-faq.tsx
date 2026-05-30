@@ -1,41 +1,34 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { Plus, Minus } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-const faqs = [
+export const faqs = [
   {
-    question: "What is IPTV and how does it work?",
-    answer: "IPTV (Internet Protocol Television) delivers television content through internet networks instead of traditional cable or satellite. Our service streams high-quality content directly to your device using your internet connection, providing access to thousands of live channels and on-demand content.",
+    question: "Can I use my subscription on multiple devices at once?",
+    answer: "Yes — multi-device plans let you stream simultaneously on 2, 3, or 4 screens at the same time. Use the device toggle on the pricing table to select the right option for your household.",
   },
   {
-    question: "What devices are supported?",
-    answer: "Our IPTV service works on virtually all devices including Smart TVs, Android/iOS devices, Amazon Firestick, Apple TV, MAG boxes, computers, and more. We provide detailed installation guides for each device type.",
+    question: "How does the 7-day guarantee work exactly?",
+    answer: "If our service fails to work correctly on your end within the first 7 days — technical issues, connection problems, or anything on our side — we'll fix it or refund you in full. Contact us via email or WhatsApp to open a request.",
   },
   {
-    question: "How many devices can I use simultaneously?",
-    answer: "The number of simultaneous connections depends on your subscription plan. Our plans range from 1 connection to 5 connections, allowing multiple family members to watch different content at the same time.",
+    question: "What payment methods do you accept?",
+    answer: "We accept Interac e-Transfer for Canadian customers, cryptocurrency, and other methods. Contact us on WhatsApp before purchasing to confirm your preferred payment option.",
   },
   {
-    question: "Is there a free trial available?",
-    answer: "Yes! We offer a free trial period for all new customers. You can test our service and explore all features without any commitment. No credit card required for the trial period.",
+    question: "Can I upgrade my plan after purchasing?",
+    answer: "Absolutely. You can upgrade to a longer duration or add more devices at any time. Contact our support team and we'll adjust your subscription accordingly.",
   },
   {
-    question: "What internet speed do I need?",
-    answer: "For optimal viewing experience, we recommend a minimum internet speed of 10 Mbps for HD content and 25 Mbps for 4K content. A stable internet connection ensures smooth streaming without buffering.",
+    question: "Is there a free trial available before I buy?",
+    answer: "Yes — we offer a free 24-hour trial so you can test the service on your devices before committing. Visit our Free Trial page or contact us on WhatsApp to get yours activated instantly.",
   },
   {
-    question: "Can I cancel my subscription anytime?",
-    answer: "Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees. We also offer a 7-day money-back guarantee if you are not completely satisfied with our service.",
-  },
-  {
-    question: "Do you provide customer support?",
-    answer: "Absolutely! We provide 24/7 customer support through live chat, email, and our support ticket system. Our expert team is always ready to help you with installation, troubleshooting, or any questions you may have.",
-  },
-  {
-    question: "Are there any hidden fees?",
-    answer: "No hidden fees whatsoever! The price you see is the price you pay. Our transparent pricing includes all features, channels, and support. No setup fees, no equipment rental, no surprise charges.",
+    question: "Do plans include Canadian channels and sports?",
+    answer: "Yes. Every plan includes all major Canadian channels (CBC, CTV, Sportsnet, TSN, RDS, and more), NHL, CFL, NBA, MLB, and international sports — fully covered with no extra cost.",
   },
 ]
 
@@ -49,7 +42,7 @@ export function FAQ() {
           <h2 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
             FREQUENTLY ASKED <span className="text-iptv-green">QUESTIONS</span>
           </h2>
-          <p className="mx-auto max-w-xl text-xs text-gray-500">
+          <p className="mx-auto max-w-xl text-sm text-gray-500">
             Get answers to the most common questions about our IPTV service.
             Cannot find what you are looking for? Contact our 24/7 support team.
           </p>
@@ -62,28 +55,41 @@ export function FAQ() {
               className="overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300"
             >
               <button
+                id={`faq-home-btn-${index}`}
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-home-content-${index}`}
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="flex w-full items-center justify-between px-5 py-3.5 text-left focus:outline-none"
               >
                 <span className={cn("text-sm font-bold transition-colors duration-300", openIndex === index ? "text-iptv-green" : "text-gray-900")}>
                   {faq.question}
                 </span>
-                <span className="shrink-0 transition-transform duration-300">
-                  {openIndex === index ? (
-                    <Minus className="h-4 w-4 text-iptv-green" />
-                  ) : (
-                    <Plus className="h-4 w-4 text-iptv-green" />
-                  )}
+                <span className="relative shrink-0 flex items-center justify-center h-4 w-4 transition-transform duration-300">
+                  <Plus 
+                    className={cn(
+                      "absolute h-4 w-4 text-iptv-green transition-all duration-300",
+                      openIndex === index ? "rotate-90 scale-50 opacity-0" : "rotate-0 scale-100 opacity-100"
+                    )} 
+                  />
+                  <Minus 
+                    className={cn(
+                      "absolute h-4 w-4 text-iptv-green transition-all duration-300",
+                      openIndex === index ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-50 opacity-0"
+                    )} 
+                  />
                 </span>
               </button>
               <div
+                id={`faq-home-content-${index}`}
+                role="region"
+                aria-labelledby={`faq-home-btn-${index}`}
                 className={cn(
                   "overflow-hidden transition-all duration-300 ease-in-out",
                   openIndex === index ? "max-h-[500px]" : "max-h-0"
                 )}
               >
                 <div className="px-5 pb-4">
-                  <p className="text-xs leading-relaxed text-gray-500">{faq.answer}</p>
+                  <p className="text-sm leading-relaxed text-gray-500">{faq.answer}</p>
                 </div>
               </div>
             </div>
@@ -91,10 +97,10 @@ export function FAQ() {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="mb-4 text-xs text-gray-500">Still have questions?</p>
-          <button className="rounded-md bg-iptv-green px-5 py-2.5 text-xs font-bold text-white transition-all hover:bg-iptv-green-dark ring-4 ring-iptv-green/20">
+          <p className="mb-4 text-sm text-gray-500">Still have questions?</p>
+          <Link href="/contact" className="inline-block rounded-md bg-iptv-green px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-iptv-green-dark ring-4 ring-iptv-green/20">
             Contact Support
-          </button>
+          </Link>
         </div>
       </div>
     </section>

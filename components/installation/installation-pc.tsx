@@ -19,7 +19,7 @@ const StepList = ({ steps }: { steps: any[] }) => (
  {step.tag}
  </span>
  )}
- <h6 className="text-xs font-bold text-gray-900">{step.title}</h6>
+ <h6 className="text-sm font-bold text-gray-900">{step.title}</h6>
  {step.desc && <p className="mt-1 text-[11px] leading-relaxed text-gray-500">{step.desc}</p>}
  
  {step.bullets && (
@@ -86,7 +86,7 @@ export function InstallationPc() {
  <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
  Windows <span className="text-iptv-green">& Mac Setup</span>
  </h3>
- <p className="mx-auto max-w-xl text-xs uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
+ <p className="mx-auto max-w-xl text-sm uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
  Compatible with: Windows PC & Mac computers - all versions
  </p>
  </div>
@@ -98,7 +98,7 @@ export function InstallationPc() {
  <h4 className="text-2xl font-bold text-gray-900 md:text-3xl uppercase tracking-tight">
  Recommended <span className="text-iptv-green">Applications</span>
  </h4>
- <p className="mt-2 text-xs text-gray-500 max-w-lg mx-auto leading-relaxed">
+ <p className="mt-2 text-sm text-gray-500 max-w-lg mx-auto leading-relaxed">
  Choose from these top-rated IPTV applications for the best streaming experience on your computer.
  </p>
  </div>
@@ -132,7 +132,7 @@ export function InstallationPc() {
  <span className="flex h-6 px-3 items-center justify-center rounded bg-gray-900 text-[10px] font-bold text-white tracking-widest whitespace-nowrap min-w-[70px]">METHOD 01</span>
  <h4 className="text-xl font-bold text-gray-900 uppercase tracking-tight mb-2">IPTV Smarters Pro Setup</h4>
  </div>
- <p className="text-xs text-gray-500 font-medium">The most popular and feature-rich IPTV application for Windows and Mac.</p>
+ <p className="text-sm text-gray-500 font-medium">The most popular and feature-rich IPTV application for Windows and Mac.</p>
  </div>
  
  <StepList steps={[
@@ -192,7 +192,7 @@ export function InstallationPc() {
  <span className="flex h-6 px-3 items-center justify-center rounded bg-gray-900 text-[10px] font-bold text-white tracking-widest whitespace-nowrap min-w-[70px]">METHOD 02</span>
  <h4 className="text-xl font-bold text-gray-900 uppercase tracking-tight mb-2">MyIPTV Player (Windows 10/11)</h4>
  </div>
- <p className="text-xs text-gray-500 font-medium mb-4">A powerful media player with built-in EPG support for Windows 10, Windows Phone, and Xbox One.</p>
+ <p className="text-sm text-gray-500 font-medium mb-4">A powerful media player with built-in EPG support for Windows 10, Windows Phone, and Xbox One.</p>
  <div className="inline-flex items-center space-x-2 rounded-lg bg-gray-100 px-3 py-1.5 border border-gray-200">
  <Store className="h-4 w-4 text-gray-600" />
  <span className="text-[11px] font-bold text-gray-700">Available on Microsoft Store</span>
@@ -244,7 +244,7 @@ export function InstallationPc() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2">Performance Tip</h5>
- <p className="text-xs text-gray-600 leading-relaxed font-medium">For best performance on PC/Mac, use a wired ethernet connection when possible. WiFi may cause buffering during HD/4K streams.</p>
+ <p className="text-sm text-gray-600 leading-relaxed font-medium">For best performance on PC/Mac, use a wired ethernet connection when possible. WiFi may cause buffering during HD/4K streams.</p>
  </div>
  </div>
  </div>
@@ -265,7 +265,7 @@ export function InstallationPc() {
  onClick={() => setOpenFaq(openFaq === i ? null : i)}
  className="flex w-full items-center justify-between px-6 py-4 text-left"
  >
- <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
+ <span className="text-sm font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
  <Plus className={cn(
 "h-4 w-4 text-iptv-green transition-transform duration-300",
  openFaq === i &&"rotate-45"
@@ -276,7 +276,7 @@ export function InstallationPc() {
  openFaq === i ?"max-h-40" :"max-h-0"
  )}>
  <div className="px-6 pb-6">
- <p className="text-xs leading-relaxed text-gray-500 font-medium">{faq.a}</p>
+ <p className="text-sm leading-relaxed text-gray-500 font-medium">{faq.a}</p>
  </div>
  </div>
  </div>

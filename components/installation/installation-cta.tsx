@@ -34,7 +34,7 @@ export function InstallationCta({
  </h4>
  <a 
  href={href}
- className="inline-block rounded-md bg-iptv-green px-10 py-3 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
+ className="inline-block rounded-md bg-iptv-green px-10 py-3 text-sm font-black uppercase tracking-widest text-white transition-all hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
  >
  {buttonText}
  </a>

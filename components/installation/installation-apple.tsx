@@ -19,7 +19,7 @@ const StepList = ({ steps }: { steps: any[] }) => (
  {step.tag}
  </span>
  )}
- <h6 className="text-xs font-bold text-gray-900">{step.title}</h6>
+ <h6 className="text-sm font-bold text-gray-900">{step.title}</h6>
  {step.desc && <p className="mt-1 text-[11px] leading-relaxed text-gray-500">{step.desc}</p>}
  
  {step.bullets && (
@@ -86,7 +86,7 @@ export function InstallationApple() {
  <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
  iPhone <span className="text-iptv-green">& iPad Setup</span>
  </h3>
- <p className="mx-auto max-w-xl text-xs uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
+ <p className="mx-auto max-w-xl text-sm uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
  Compatible with: All iPhone and iPad devices running iOS 12.0 or later
  </p>
  </div>
@@ -100,12 +100,12 @@ export function InstallationApple() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-900">Setup Time</h4>
- <p className="text-xs font-bold text-gray-500 mt-0.5">Quick Setup - 3 minutes</p>
+ <p className="text-sm font-bold text-gray-500 mt-0.5">Quick Setup - 3 minutes</p>
  </div>
  </div>
  <div className="mt-4 pt-4 border-t border-gray-100 flex items-start space-x-3">
  <Smartphone className="h-4 w-4 text-gray-400 mt-0.5 shrink-0" />
- <p className="text-xs text-gray-500 font-medium">Available from App Store - No jailbreak required</p>
+ <p className="text-sm text-gray-500 font-medium">Available from App Store - No jailbreak required</p>
  </div>
  </div>
  </div>
@@ -120,7 +120,7 @@ export function InstallationApple() {
  <span className="flex h-6 px-3 items-center justify-center rounded bg-gray-900 text-[10px] font-bold text-white tracking-widest whitespace-nowrap min-w-[70px]">METHOD 01</span>
  <h4 className="text-xl font-bold text-gray-900 uppercase tracking-tight mb-2">iMPlayer Setup</h4>
  </div>
- <p className="text-xs text-gray-500 font-medium">The most reliable and user-friendly IPTV app for iPhone and iPad devices.</p>
+ <p className="text-sm text-gray-500 font-medium">The most reliable and user-friendly IPTV app for iPhone and iPad devices.</p>
  </div>
  
  <StepList steps={[
@@ -163,7 +163,7 @@ export function InstallationApple() {
  <span className="flex h-6 px-3 items-center justify-center rounded bg-gray-900 text-[10px] font-bold text-white tracking-widest whitespace-nowrap min-w-[70px]">METHOD 02</span>
  <h4 className="text-xl font-bold text-gray-900 uppercase tracking-tight mb-2">Smarters Player Lite Setup</h4>
  </div>
- <p className="text-xs text-gray-500 font-medium">Alternative IPTV app with excellent features for iPhone and iPad users.</p>
+ <p className="text-sm text-gray-500 font-medium">Alternative IPTV app with excellent features for iPhone and iPad users.</p>
  </div>
 
  <StepList steps={[
@@ -205,7 +205,7 @@ export function InstallationApple() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2">Performance Tip</h5>
- <p className="text-xs text-gray-600 leading-relaxed font-medium">For better performance on iOS devices, ensure you're connected to a stable WiFi network. Cellular data may cause buffering issues.</p>
+ <p className="text-sm text-gray-600 leading-relaxed font-medium">For better performance on iOS devices, ensure you're connected to a stable WiFi network. Cellular data may cause buffering issues.</p>
  </div>
  </div>
  </div>
@@ -226,7 +226,7 @@ export function InstallationApple() {
  onClick={() => setOpenFaq(openFaq === i ? null : i)}
  className="flex w-full items-center justify-between px-6 py-4 text-left"
  >
- <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
+ <span className="text-sm font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
  <Plus className={cn(
 "h-4 w-4 text-iptv-green transition-transform duration-300",
  openFaq === i &&"rotate-45"
@@ -237,7 +237,7 @@ export function InstallationApple() {
  openFaq === i ?"max-h-40" :"max-h-0"
  )}>
  <div className="px-6 pb-6">
- <p className="text-xs leading-relaxed text-gray-500 font-medium">{faq.a}</p>
+ <p className="text-sm leading-relaxed text-gray-500 font-medium">{faq.a}</p>
  </div>
  </div>
  </div>

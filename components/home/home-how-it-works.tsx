@@ -40,7 +40,7 @@ export function HowItWorks() {
           <h2 className="mb-3 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl uppercase">
             HOW IT <span className="text-iptv-green">WORKS</span>
           </h2>
-          <p className="mx-auto max-w-xl text-xs text-gray-500">
+          <p className="mx-auto max-w-xl text-sm text-gray-500">
             Get started with premium IPTV streaming in just 4 simple steps. From choosing your plan to watching your favorite content.
           </p>
         </div>
@@ -63,7 +63,7 @@ export function HowItWorks() {
                   </div>
                 )}
                 <h3 className="mb-2 text-base font-bold text-gray-900 transition-colors group-hover:text-iptv-green">{step.title}</h3>
-                <p className="mx-auto max-w-xs text-xs leading-relaxed text-gray-500">
+                <p className="mx-auto max-w-xs text-sm leading-relaxed text-gray-500">
                   {step.description}
                 </p>
               </div>

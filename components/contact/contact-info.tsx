@@ -40,7 +40,7 @@ export function ContactInfo() {
         <h2 className="text-3xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl uppercase">
           Contact <span className="text-iptv-green">Information</span>
         </h2>
-        <p className="mt-4 mx-auto lg:mx-0 max-w-xl text-xs leading-relaxed text-gray-500">
+        <p className="mt-4 mx-auto lg:mx-0 max-w-xl text-sm leading-relaxed text-gray-500">
           Reach out to us through any of these channels. We're committed to providing 
           excellent customer service and support.
         </p>
@@ -85,7 +85,7 @@ export function ContactInfo() {
                 </div>
               </div>
               <div>
-                <h4 className="text-xs font-black uppercase tracking-tight mb-1">{title}</h4>
+                <h4 className="text-sm font-black uppercase tracking-tight mb-1">{title}</h4>
                 <p className={cn(
                   "text-[11px] font-bold leading-tight",
                   isMobileFeatured ? "text-white sm:text-gray-900" : 

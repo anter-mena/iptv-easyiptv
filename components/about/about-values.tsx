@@ -51,7 +51,7 @@ export function Values() {
               Core values that <span className="text-iptv-green">drive excellence.</span>
             </h2>
           </div>
-          <p className="text-xs leading-relaxed text-gray-500 lg:max-w-md lg:justify-self-end text-center lg:text-left">
+          <p className="text-sm leading-relaxed text-gray-500 lg:max-w-md lg:justify-self-end text-center lg:text-left">
             The fundamental principles that guide our technology, our support, 
             and the way we serve the community who chooses us.
           </p>
@@ -97,7 +97,7 @@ export function Values() {
                 <h3 className="text-base font-bold uppercase tracking-tight">{title}</h3>
                 <p
                   className={cn(
-                    "text-xs leading-relaxed",
+                    "text-sm leading-relaxed",
                     isMobileFeatured ? "text-white/90 lg:text-gray-500" : 
                     isDesktopFeatured ? "text-gray-500 lg:text-white/90" : 
                     "text-gray-500"

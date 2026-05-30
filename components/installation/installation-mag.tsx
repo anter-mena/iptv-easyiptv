@@ -35,7 +35,7 @@ export function InstallationMag() {
  <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
  MAG Box <span className="text-red-600">Not Supported</span>
  </h3>
- <p className="mx-auto max-w-xl text-xs uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
+ <p className="mx-auto max-w-xl text-sm uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
  MAG Box Models: MAG 250, MAG 254, MAG 256, MAG 322, MAG 324, MAG 349, MAG 351, MAG 410, MAG 420, and other MAG devices
  </p>
  </div>
@@ -47,7 +47,7 @@ export function InstallationMag() {
  <AlertCircle className="h-6 w-6 text-red-600" />
  </div>
  <h4 className="mb-4 text-lg font-black uppercase tracking-tight text-red-900">Devices Incompatible</h4>
- <p className="mb-8 text-xs font-medium leading-relaxed text-red-800 max-w-lg mx-auto">
+ <p className="mb-8 text-sm font-medium leading-relaxed text-red-800 max-w-lg mx-auto">
  Unfortunately, MAG Box devices use the Stalker Portal system which is incompatible with our high-speed Xtream Codes infrastructure.
  </p>
  
@@ -111,7 +111,7 @@ export function InstallationMag() {
  onClick={() => setOpenFaq(openFaq === i ? null : i)}
  className="flex w-full items-center justify-between px-6 py-4 text-left"
  >
- <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
+ <span className="text-sm font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
  <Plus className={cn(
 "h-4 w-4 text-iptv-green transition-transform duration-300",
  openFaq === i &&"rotate-45"
@@ -122,7 +122,7 @@ export function InstallationMag() {
  openFaq === i ?"max-h-40" :"max-h-0"
  )}>
  <div className="px-6 pb-6">
- <p className="text-xs leading-relaxed text-gray-500 font-medium">{faq.a}</p>
+ <p className="text-sm leading-relaxed text-gray-500 font-medium">{faq.a}</p>
  </div>
  </div>
  </div>

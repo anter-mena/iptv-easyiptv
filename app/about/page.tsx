@@ -6,8 +6,16 @@ import { Values } from "@/components/about/about-values"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Us - Easy IPTV Story",
-  description: "Learn about the mission, values, and journey of Easy IPTV. We're revolutionizing the streaming industry with cutting-edge technology.",
+  title: "About Easy IPTV - The Best Premium Streaming Service Provider",
+  description: "Learn about the mission, values, and journey of Easy IPTV. We are revolutionizing the streaming industry with cutting-edge technology and 24/7 support.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Easy IPTV - The Best Premium Streaming Service Provider",
+    description: "Learn about the mission, values, and journey of Easy IPTV. We are revolutionizing the streaming industry with cutting-edge technology and 24/7 support.",
+    url: "/about",
+  },
 }
 
 export default function AboutPage() {

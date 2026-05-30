@@ -10,10 +10,10 @@ export function Mission() {
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
               OUR <span className="text-iptv-green">MISSION</span>
             </h2>
-            <p className="mb-4 text-xs font-bold text-gray-800 uppercase tracking-wide">
+            <p className="mb-4 text-sm font-bold text-gray-800 uppercase tracking-wide">
               To democratize access to premium entertainment worldwide.
             </p>
-            <p className="mx-auto lg:mx-0 mb-6 max-w-xl text-xs leading-relaxed text-gray-500">
+            <p className="mx-auto lg:mx-0 mb-6 max-w-xl text-sm leading-relaxed text-gray-500">
               We believe that everyone deserves access to world-class entertainment without 
               the limitations of traditional broadcasting. Our mission drives us to 
               continuously innovate and improve our service, providing reliable, 
@@ -28,7 +28,7 @@ export function Mission() {
               ].map((item) => (
                 <div key={item} className="flex items-center space-x-2.5">
                   <CheckCircle className="h-4 w-4 text-iptv-green" />
-                  <span className="text-xs font-medium text-gray-600">{item}</span>
+                  <span className="text-sm font-medium text-gray-600">{item}</span>
                 </div>
               ))}
             </div>
@@ -40,7 +40,7 @@ export function Mission() {
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-iptv-green/20">
                   <Tv className="h-7 w-7 text-iptv-green" />
                 </div>
-                <h3 className="mb-2 text-xs font-black uppercase tracking-tight text-gray-900">Premium Streaming</h3>
+                <h3 className="mb-2 text-sm font-black uppercase tracking-tight text-gray-900">Premium Streaming</h3>
                 <p className="text-[10px] leading-relaxed text-gray-500 max-w-[200px] mx-auto">
                   Delivering exceptional entertainment experiences through innovative technology and dedication to quality.
                 </p>

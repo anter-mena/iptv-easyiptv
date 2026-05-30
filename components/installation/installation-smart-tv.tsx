@@ -19,7 +19,7 @@ const StepList = ({ steps }: { steps: any[] }) => (
  {step.tag}
  </span>
  )}
- <h6 className="text-xs font-bold text-gray-900">{step.title}</h6>
+ <h6 className="text-sm font-bold text-gray-900">{step.title}</h6>
  {step.desc && <p className="mt-1 text-[11px] leading-relaxed text-gray-500">{step.desc}</p>}
  
  {step.bullets && (
@@ -94,7 +94,7 @@ export function InstallationSmartTv() {
  <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
  Smart TV <span className="text-iptv-green">Setup</span>
  </h3>
- <p className="mx-auto max-w-xl text-xs uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
+ <p className="mx-auto max-w-xl text-sm uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
  Compatible with: All Smart TV brands including LG WebOS, Samsung Tizen, Sony Android TV, TCL, Hisense, Vizio, and other major brands
  </p>
  </div>
@@ -108,7 +108,7 @@ export function InstallationSmartTv() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-red-900">Important Notice</h4>
- <p className="text-xs font-bold text-red-700 mt-0.5 leading-relaxed">If your Smart TV has the Google Play Store, please follow the Android TV tutorial instead of this one.</p>
+ <p className="text-sm font-bold text-red-700 mt-0.5 leading-relaxed">If your Smart TV has the Google Play Store, please follow the Android TV tutorial instead of this one.</p>
  </div>
  </div>
  </div>
@@ -120,12 +120,12 @@ export function InstallationSmartTv() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-900">Setup Time</h4>
- <p className="text-xs font-bold text-gray-500 mt-0.5">Quick Setup - 5-7 minutes</p>
+ <p className="text-sm font-bold text-gray-500 mt-0.5">Quick Setup - 5-7 minutes</p>
  </div>
  </div>
  <div className="mt-4 pt-4 border-t border-gray-100 flex items-start space-x-3">
  <MonitorPlay className="h-4 w-4 text-gray-400 mt-0.5 shrink-0" />
- <p className="text-xs text-gray-500 font-medium">Hot Player app from your TV's App Store</p>
+ <p className="text-sm text-gray-500 font-medium">Hot Player app from your TV's App Store</p>
  </div>
  </div>
  </div>
@@ -258,7 +258,7 @@ export function InstallationSmartTv() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2">Streaming Quality Tip</h5>
- <p className="text-xs text-gray-600 leading-relaxed font-medium">For best streaming quality on Smart TV, ensure your device is connected to a stable internet connection with at least 25 Mbps for HD content and 50+ Mbps for 4K content.</p>
+ <p className="text-sm text-gray-600 leading-relaxed font-medium">For best streaming quality on Smart TV, ensure your device is connected to a stable internet connection with at least 25 Mbps for HD content and 50+ Mbps for 4K content.</p>
  </div>
  </div>
  </div>
@@ -279,7 +279,7 @@ export function InstallationSmartTv() {
  onClick={() => setOpenFaq(openFaq === i ? null : i)}
  className="flex w-full items-center justify-between px-6 py-4 text-left"
  >
- <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
+ <span className="text-sm font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
  <Plus className={cn(
 "h-4 w-4 text-iptv-green transition-transform duration-300",
  openFaq === i &&"rotate-45"
@@ -290,7 +290,7 @@ export function InstallationSmartTv() {
  openFaq === i ?"max-h-40" :"max-h-0"
  )}>
  <div className="px-6 pb-6">
- <p className="text-xs leading-relaxed text-gray-500 font-medium">{faq.a}</p>
+ <p className="text-sm leading-relaxed text-gray-500 font-medium">{faq.a}</p>
  </div>
  </div>
  </div>

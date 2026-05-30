@@ -28,14 +28,14 @@ export function InstallationHero() {
  <h1 className="mb-4 text-3xl font-black leading-tight md:text-5xl lg:text-6xl uppercase tracking-tight [text-shadow:_0_1px_20px_rgb(0_0_0_/_60%)]">
  INSTALLATION <span className="text-iptv-green">GUIDE</span>
  </h1>
- <p className="mx-auto mb-8 max-w-xl text-xs text-gray-300 md:text-sm uppercase tracking-wider leading-relaxed">
+ <p className="mx-auto mb-8 max-w-xl text-sm text-gray-300 md:text-sm uppercase tracking-wider leading-relaxed">
  Easy step-by-step installation instructions for all your devices. 
  Get up and streaming in minutes with our comprehensive setup guides.
  </p>
  <div className="flex justify-center">
  <Link
  href="#devices"
- className="rounded-md bg-iptv-green px-6 py-2.5 text-xs font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
+ className="rounded-md bg-iptv-green px-6 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
  >
  Choose Your Device
  </Link>

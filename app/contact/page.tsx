@@ -5,8 +5,16 @@ import { ContactMethods } from "@/components/contact/contact-methods"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact Us - Easy IPTV Support",
-  description: "Get in touch with Easy IPTV support. We're here 24/7 to help you with installation, billing, and technical questions.",
+  title: "Contact Easy IPTV Support | 24/7 Customer Service Team",
+  description: "Get in touch with Easy IPTV support. We are here 24/7 to help you with installation, billing, technical questions, and choosing the right plan.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Easy IPTV Support | 24/7 Customer Service Team",
+    description: "Get in touch with Easy IPTV support. We are here 24/7 to help you with installation, billing, technical questions, and choosing the right plan.",
+    url: "/contact",
+  },
 }
 
 export default function ContactPage() {

@@ -20,7 +20,7 @@ const StepList = ({ steps }: { steps: any[] }) => (
  {step.tag}
  </span>
  )}
- <h6 className="text-xs font-bold text-gray-900">{step.title}</h6>
+ <h6 className="text-sm font-bold text-gray-900">{step.title}</h6>
  {step.desc && <p className="mt-1 text-[11px] leading-relaxed text-gray-500">{step.desc}</p>}
  
  {step.bullets && (
@@ -101,7 +101,7 @@ export function InstallationFirestick() {
  <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
  Fire TV Stick <span className="text-iptv-green">Setup</span>
  </h3>
- <p className="mx-auto max-w-xl text-xs uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
+ <p className="mx-auto max-w-xl text-sm uppercase tracking-widest text-gray-500 font-bold leading-relaxed">
  Compatible with: Amazon Fire TV Stick, Fire TV Stick 4K, Fire TV Cube, Fire TV devices
  </p>
  </div>
@@ -115,7 +115,7 @@ export function InstallationFirestick() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-orange-900">Setup Time - 5-10 minutes</h4>
- <p className="text-xs font-bold text-orange-700 mt-0.5 leading-relaxed">Our V12Mate Player - Beginner friendly</p>
+ <p className="text-sm font-bold text-orange-700 mt-0.5 leading-relaxed">Our V12Mate Player - Beginner friendly</p>
  </div>
  </div>
  </div>
@@ -127,7 +127,7 @@ export function InstallationFirestick() {
  </div>
  <div>
  <h4 className="text-[10px] font-black uppercase tracking-widest text-red-900">Very Important</h4>
- <p className="text-xs font-bold text-red-700 mt-0.5 leading-relaxed">If you already have TiviMate installed, please uninstall it first — otherwise V12Mate will not install.</p>
+ <p className="text-sm font-bold text-red-700 mt-0.5 leading-relaxed">If you already have TiviMate installed, please uninstall it first — otherwise V12Mate will not install.</p>
  </div>
  </div>
  </div>
@@ -165,7 +165,7 @@ export function InstallationFirestick() {
  </div>
  </div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2 text-left">Downloader App</h5>
- <p className="text-xs text-gray-500 font-medium text-left">Install the Downloader app from Fire TV App Store</p>
+ <p className="text-sm text-gray-500 font-medium text-left">Install the Downloader app from Fire TV App Store</p>
  </div>
  <div className="bg-white p-6 text-center rounded-xl border border-gray-100 shadow-sm">
  <div className="flex items-center justify-between mb-4">
@@ -175,7 +175,7 @@ export function InstallationFirestick() {
  </div>
  </div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2 text-left">Enable Settings</h5>
- <p className="text-xs text-gray-500 font-medium text-left">Allow unknown sources and developer options</p>
+ <p className="text-sm text-gray-500 font-medium text-left">Allow unknown sources and developer options</p>
  </div>
  <div className="bg-white p-6 text-center rounded-xl border border-gray-100 shadow-sm">
  <div className="flex items-center justify-between mb-4">
@@ -185,7 +185,7 @@ export function InstallationFirestick() {
  </div>
  </div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2 text-left">Install V12Mate</h5>
- <p className="text-xs text-gray-500 font-medium text-left">Set up V12Mate and configure your IPTV service</p>
+ <p className="text-sm text-gray-500 font-medium text-left">Set up V12Mate and configure your IPTV service</p>
  </div>
  </div>
  </div>
@@ -326,8 +326,8 @@ export function InstallationFirestick() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-red-900 mb-2">Troubleshooting Login Issues</h5>
- <p className="text-xs text-red-800 leading-relaxed font-bold mb-2">If No Channels Load And Content Count Doesn't Show: Your login details are wrong.</p>
- <p className="text-xs text-red-700 leading-relaxed font-medium">Go to Settings → Playlists → V12Mate → Xtream Codes Parameters and double-check your username and password, including capital letters. If they're incorrect, no channels will appear.</p>
+ <p className="text-sm text-red-800 leading-relaxed font-bold mb-2">If No Channels Load And Content Count Doesn't Show: Your login details are wrong.</p>
+ <p className="text-sm text-red-700 leading-relaxed font-medium">Go to Settings → Playlists → V12Mate → Xtream Codes Parameters and double-check your username and password, including capital letters. If they're incorrect, no channels will appear.</p>
  </div>
  </div>
  </div>
@@ -339,7 +339,7 @@ export function InstallationFirestick() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-gray-900 mb-2">EPG (Program Guide) Information</h5>
- <p className="text-xs text-gray-800 leading-relaxed font-medium">The EPG (guide information) loads in the background. Please give it some time, and you can view it in Settings → EPG.</p>
+ <p className="text-sm text-gray-800 leading-relaxed font-medium">The EPG (guide information) loads in the background. Please give it some time, and you can view it in Settings → EPG.</p>
  </div>
  </div>
  </div>
@@ -351,7 +351,7 @@ export function InstallationFirestick() {
  </div>
  <div>
  <h5 className="text-sm font-black uppercase tracking-tight text-yellow-900 mb-2">Developer Options Tip</h5>
- <p className="text-xs text-yellow-800 leading-relaxed font-medium">If Developer Options is hidden, go to About and click Fire TV Stick 7 times to enable it.</p>
+ <p className="text-sm text-yellow-800 leading-relaxed font-medium">If Developer Options is hidden, go to About and click Fire TV Stick 7 times to enable it.</p>
  </div>
  </div>
  </div>
@@ -372,7 +372,7 @@ export function InstallationFirestick() {
  onClick={() => setOpenFaq(openFaq === i ? null : i)}
  className="flex w-full items-center justify-between px-6 py-4 text-left"
  >
- <span className="text-xs font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
+ <span className="text-sm font-bold text-gray-900 uppercase tracking-tight">{faq.q}</span>
  <Plus className={cn(
 "h-4 w-4 text-iptv-green transition-transform duration-300",
  openFaq === i &&"rotate-45"
@@ -383,7 +383,7 @@ export function InstallationFirestick() {
  openFaq === i ?"max-h-40" :"max-h-0"
  )}>
  <div className="px-6 pb-6">
- <p className="text-xs leading-relaxed text-gray-500 font-medium">{faq.a}</p>
+ <p className="text-sm leading-relaxed text-gray-500 font-medium">{faq.a}</p>
  </div>
  </div>
  </div>

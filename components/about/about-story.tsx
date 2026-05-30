@@ -41,7 +41,7 @@ export function Story() {
           <h2 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
             OUR <span className="text-iptv-green">STORY</span>
           </h2>
-          <p className="mx-auto max-w-xl text-xs text-gray-500">
+          <p className="mx-auto max-w-xl text-sm text-gray-500">
             From humble beginnings to becoming a leading IPTV provider, 
             our journey has been driven by innovation and customer focus.
           </p>
@@ -82,7 +82,7 @@ export function Story() {
                   {item.title}
                 </h3>
                 <p className={cn(
-                  "text-xs leading-relaxed",
+                  "text-sm leading-relaxed",
                   item.isSpecial ? "text-white/90" : "text-gray-500"
                 )}>
                   {item.description}

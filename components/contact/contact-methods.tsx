@@ -57,10 +57,10 @@ export function ContactMethods() {
               </div>
               <div className="text-center">
                 <h3 className="mb-4 text-lg font-bold uppercase tracking-tight text-gray-900">{method.title}</h3>
-                <p className="mb-6 text-xs font-medium leading-relaxed text-gray-500">{method.description}</p>
+                <p className="mb-6 text-sm font-medium leading-relaxed text-gray-500">{method.description}</p>
                 <Link
                   href={method.href}
-                  className="inline-block rounded-md bg-iptv-green px-8 py-2.5 text-xs font-bold uppercase tracking-widest text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
+                  className="inline-block rounded-md bg-iptv-green px-8 py-2.5 text-sm font-bold uppercase tracking-widest text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
                 >
                   {method.action}
                 </Link>

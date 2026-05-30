@@ -42,7 +42,7 @@ export function InstallationDeviceSelection({ selectedId, onSelect }: DeviceSele
  Select your <span className="text-iptv-green">Device</span>
  </h2>
  </div>
- <p className="text-xs leading-relaxed text-gray-500 lg:max-w-md lg:justify-self-end text-center lg:text-left">
+ <p className="text-sm leading-relaxed text-gray-500 lg:max-w-md lg:justify-self-end text-center lg:text-left">
  Choose your device below to get started with the installation process. 
  All guides include step-by-step tutorials and troubleshooting tips.
  </p>
@@ -84,7 +84,7 @@ export function InstallationDeviceSelection({ selectedId, onSelect }: DeviceSele
  </div>
  <div className={selectedId === device.id && device.color ==="red" ?"text-red-950" :""}>
  <h3 className={cn(
-"text-xs font-black uppercase tracking-tight mb-1",
+"text-sm font-black uppercase tracking-tight mb-1",
  device.color ==="red" ?"text-red-900" :""
  )}>{device.title}</h3>
  <p className={cn(

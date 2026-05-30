@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import Image from "next/image"
 import { Check } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -13,70 +14,50 @@ interface Plan {
   connections?: string
 }
 
-const singlePlans: Plan[] = [
-  {
-    name: "BASIC",
-    price: "$19.99",
-    features: ["20,000+ Live Channels", "50,000+ VOD", "4K Quality", "24/7 Support"],
-    popular: false,
-  },
-  {
-    name: "STANDARD",
-    price: "$24.99",
-    features: ["20,000+ Live Channels", "50,000+ VOD", "4K Quality", "Premium Support"],
-    popular: false,
-  },
-  {
-    name: "PREMIUM",
-    price: "$29.99",
-    features: ["20,000+ Live Channels", "50,000+ VOD", "4K Quality", "Priority Support"],
-    popular: true,
-  },
-  {
-    name: "ULTIMATE",
-    price: "$39.99",
-    features: ["20,000+ Live Channels", "50,000+ VOD", "4K Quality", "VIP Support"],
-    popular: false,
-  },
+const commonFeatures = [
+  "4K Ultra HD Streaming Quality",
+  "25,000+ Live Channels Worldwide",
+  "120,000+ Movies & TV Shows",
+  "Premium PPV Events Included",
+  "Instant VOD Access",
+  "Smart EPG & Catch-Up TV",
+  "24/7 Canadian Support",
+  "Multi-Device Compatibility"
 ]
 
-const multiplePlans: Plan[] = [
-  {
-    name: "FAMILY",
-    price: "$34.99",
-    connections: "2 Connections",
-    features: ["20,000+ Live Channels", "50,000+ VOD", "4K Quality", "Multi-Device Support"],
-    popular: false,
-  },
-  {
-    name: "BUSINESS",
-    price: "$49.99",
-    connections: "3 Connections",
-    features: ["20,000+ Live Channels", "50,000+ VOD", "4K Quality", "Business Support"],
-    popular: false,
-  },
-  {
-    name: "ENTERPRISE",
-    price: "$64.99",
-    connections: "4 Connections",
-    features: ["20,000+ Live Channels", "50,000+ VOD", "4K Quality", "VIP Support"],
-    popular: true,
-  },
-  {
-    name: "ULTIMATE",
-    price: "$79.99",
-    connections: "5 Connections",
-    features: ["25,000+ Live Channels", "75,000+ VOD", "8K Quality", "VIP Support"],
-    popular: false,
-  },
-]
+const plansData: Record<number, Plan[]> = {
+  1: [
+    { name: "1 Month", price: "29", features: commonFeatures, popular: false, connections: "1 Device" },
+    { name: "3 Month", price: "49", features: commonFeatures, popular: false, connections: "1 Device" },
+    { name: "6 Month", price: "89", features: commonFeatures, popular: true, connections: "1 Device" },
+    { name: "12 Month", price: "129", features: commonFeatures, popular: false, connections: "1 Device" },
+  ],
+  2: [
+    { name: "1 Month", price: "39", features: commonFeatures, popular: false, connections: "2 Devices" },
+    { name: "3 Month", price: "69", features: commonFeatures, popular: false, connections: "2 Devices" },
+    { name: "6 Month", price: "119", features: commonFeatures, popular: true, connections: "2 Devices" },
+    { name: "12 Month", price: "179", features: commonFeatures, popular: false, connections: "2 Devices" },
+  ],
+  3: [
+    { name: "1 Month", price: "49", features: commonFeatures, popular: false, connections: "3 Devices" },
+    { name: "3 Month", price: "89", features: commonFeatures, popular: false, connections: "3 Devices" },
+    { name: "6 Month", price: "129", features: commonFeatures, popular: true, connections: "3 Devices" },
+    { name: "12 Month", price: "199", features: commonFeatures, popular: false, connections: "3 Devices" },
+  ],
+  4: [
+    { name: "1 Month", price: "59", features: commonFeatures, popular: false, connections: "4 Devices" },
+    { name: "3 Month", price: "109", features: commonFeatures, popular: false, connections: "4 Devices" },
+    { name: "6 Month", price: "159", features: commonFeatures, popular: true, connections: "4 Devices" },
+    { name: "12 Month", price: "219", features: commonFeatures, popular: false, connections: "4 Devices" },
+  ],
+}
 
 const devices = ["windows", "ios", "lg", "android"]
 
 export function Pricing() {
-  const [tab, setTab] = React.useState<"single" | "multiple">("single")
+  const [activeTab, setActiveTab] = React.useState<number>(1)
 
-  const currentPlans = tab === "single" ? singlePlans : multiplePlans
+  const currentPlans = plansData[activeTab]
 
   return (
     <section id="pricing" className="bg-gray-50 py-16">
@@ -85,50 +66,46 @@ export function Pricing() {
           <h2 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
             CHOOSE YOUR IPTV <span className="text-iptv-green">4K SUBSCRIPTION</span>
           </h2>
-          <p className="mx-auto max-w-xl text-xs text-gray-500">
+          <p className="mx-auto max-w-xl text-sm text-gray-500">
             Choose from our flexible plans and enjoy premium streaming at an unbeatable price. 
             All plans include free trial and money-back guarantee.
           </p>
         </div>
 
         {/* Pricing Tabs */}
-        <div className="mb-8 flex justify-center">
-          <div className="flex rounded-md bg-gray-200 p-1">
-            <button
-              onClick={() => setTab("single")}
-              className={cn(
-                "rounded-md px-6 py-2 text-xs font-bold transition-all duration-300",
-                tab === "single" ? "bg-iptv-green text-white shadow-md" : "text-gray-500 hover:text-gray-700"
-              )}
-            >
-              1 CONNECTION
-            </button>
-            <button
-              onClick={() => setTab("multiple")}
-              className={cn(
-                "rounded-md px-6 py-2 text-xs font-bold transition-all duration-300",
-                tab === "multiple" ? "bg-iptv-green text-white shadow-md" : "text-gray-500 hover:text-gray-700"
-              )}
-            >
-              MULTI CONNECTIONS
-            </button>
+        <div className="mb-8 flex justify-center px-4 w-full">
+          <div className="flex flex-nowrap overflow-x-auto justify-start sm:justify-center rounded-md bg-gray-200 p-1 gap-1 w-full sm:w-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            {[1, 2, 3, 4].map((num) => (
+              <button
+                key={num}
+                aria-label={`View pricing for ${num} device${num === 1 ? '' : 's'}`}
+                aria-pressed={activeTab === num}
+                onClick={() => setActiveTab(num)}
+                className={cn(
+                  "whitespace-nowrap rounded-md px-6 py-3 text-sm sm:px-8 font-bold transition-all duration-300 flex-1 sm:flex-none text-center",
+                  activeTab === num ? "bg-iptv-green text-white shadow-md" : "text-gray-500 hover:text-gray-700"
+                )}
+              >
+                {num} {num === 1 ? 'DEVICE' : 'DEVICES'}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Plans Grid - Back to 1 column with tighter margins */}
+        {/* Plans Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 px-2 sm:px-0">
           {currentPlans.map((plan) => (
             <div
               key={plan.name}
               className={cn(
-                "relative flex flex-col rounded-xl border p-6 text-center transition-all duration-500 w-full mx-auto max-w-sm lg:max-w-none",
+                "relative flex flex-col rounded-xl border p-6 text-center transition-all duration-500 w-full mx-auto max-w-sm lg:max-w-none bg-white",
                 plan.popular 
-                  ? "border-iptv-green shadow-xl scale-105 z-10 bg-white hover:scale-[1.08]" 
-                  : "border-gray-200 bg-white shadow-sm hover:border-iptv-green hover:scale-[1.03]"
+                  ? "border-gray-200 md:border-iptv-green shadow-sm hover:scale-[1.03] md:shadow-xl md:scale-105 md:z-10 md:hover:scale-[1.08]" 
+                  : "border-gray-200 shadow-sm hover:border-iptv-green hover:scale-[1.03]"
               )}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 hidden md:block">
                   <span className="rounded-full bg-iptv-green px-3 py-0.5 text-[10px] font-bold text-white uppercase tracking-wider">
                     POPULAR
                   </span>
@@ -136,11 +113,11 @@ export function Pricing() {
               )}
               <div className="mb-4">
                 <h3 className="mb-1 text-base font-bold text-gray-900 uppercase tracking-tight">{plan.name}</h3>
-                <p className="text-[10px] font-bold text-iptv-green uppercase tracking-wide">{plan.connections || "1 Connection"}</p>
+                <p className="text-[10px] font-bold text-iptv-green uppercase tracking-wide">{plan.connections}</p>
               </div>
-              <div className="mb-4">
+              <div className="mb-4 flex items-center justify-center">
                 <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
-                <span className="text-xs text-gray-500">/mo</span>
+                <span className="ml-1 text-sm font-bold text-gray-500">$CA</span>
               </div>
               <ul className="mb-6 flex-1 space-y-2.5 text-left">
                 {plan.features.map((feature) => (
@@ -150,9 +127,9 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              <button className="mb-5 w-full rounded-md bg-iptv-green py-2.5 px-4 text-xs font-bold text-white transition-all hover:bg-iptv-green-dark ring-4 ring-iptv-green/20">
+              <Link href="/contact" className="mb-5 block w-full rounded-md bg-iptv-green py-2.5 px-4 text-center text-xs font-bold text-white transition-all hover:bg-iptv-green-dark ring-4 ring-iptv-green/20">
                 Get Started
-              </button>
+              </Link>
               
               {/* Device Icons */}
               <div className="grid grid-cols-4 gap-1 px-1">

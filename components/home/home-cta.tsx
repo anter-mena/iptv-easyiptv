@@ -28,14 +28,14 @@ export function CTA() {
           <h2 className="mb-3 text-3xl font-bold md:text-4xl uppercase tracking-tight">
             Ready to Start Your <span className="text-iptv-green">Streaming Journey</span>?
           </h2>
-          <p className="mx-auto mb-6 max-w-xl text-xs text-white/80">
+          <p className="mx-auto mb-6 max-w-xl text-sm text-white/80">
             Join thousands of satisfied customers and experience premium IPTV streaming today. 
             Start your free trial now - no commitment, no risk.
           </p>
           <div className="mb-10 flex justify-center items-center">
             <Link
               href="#pricing"
-              className="rounded-md bg-iptv-green px-5 py-2.5 text-xs font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
+              className="rounded-md bg-iptv-green px-5 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
             >
               Get Started Now
             </Link>

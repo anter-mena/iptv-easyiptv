@@ -11,7 +11,7 @@ export function Experience() {
               EXPERIENCE BEST IPTV<br />PROVIDER FOR<br />
               <span className="text-iptv-green">STREAMING EXPERIENCE</span>
             </h2>
-            <p className="mx-auto mb-6 max-w-xl text-xs text-gray-400 lg:mx-0">
+            <p className="mx-auto mb-6 max-w-xl text-sm text-gray-400 lg:mx-0">
               Transform your entertainment experience with our premium IPTV service. 
               Enjoy unlimited access to global content with zero buffering.
             </p>
@@ -25,7 +25,7 @@ export function Experience() {
               ].map((item) => (
                 <div key={item} className="flex items-center space-x-2.5">
                   <CheckCircle className="h-4 w-4 text-iptv-green" />
-                  <span className="text-xs font-medium text-gray-300">{item}</span>
+                  <span className="text-sm font-medium text-gray-300">{item}</span>
                 </div>
               ))}
             </div>
@@ -47,7 +47,7 @@ export function Experience() {
             <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src="https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/iptv/tools/image2.png"
-                alt="Streaming Interface"
+                alt="Easy IPTV Premium Streaming App Interface on Smart TV"
                 fill
                 className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -97,6 +97,7 @@ export function SiteHeader() {
                 width={120} 
                 height={40} 
                 className="h-8 w-auto md:h-10" 
+                style={{ width: 'auto' }}
                 priority
               />
             </Link>

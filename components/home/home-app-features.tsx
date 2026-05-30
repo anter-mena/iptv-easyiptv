@@ -51,7 +51,7 @@ export function AppFeatures() {
               Built around the viewer, <span className="text-iptv-green">not the provider.</span>
             </h2>
           </div>
-          <p className="text-xs leading-relaxed text-gray-500 lg:max-w-md lg:justify-self-end text-center lg:text-left">
+          <p className="text-sm leading-relaxed text-gray-500 lg:max-w-md lg:justify-self-end text-center lg:text-left">
             Six promises we hold ourselves to — written into our service, our technology, and the
             way we treat the community who choose us.
           </p>
@@ -97,7 +97,7 @@ export function AppFeatures() {
                 <h3 className="text-base font-bold uppercase tracking-tight">{title}</h3>
                 <p
                   className={cn(
-                    "text-xs leading-relaxed",
+                    "text-sm leading-relaxed",
                     isMobileFeatured ? "text-white/90 lg:text-gray-500" : 
                     isDesktopFeatured ? "text-gray-500 lg:text-white/90" : 
                     "text-gray-500"

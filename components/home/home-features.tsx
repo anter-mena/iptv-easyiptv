@@ -41,7 +41,7 @@ export function Features() {
           <h2 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl uppercase tracking-tight">
             WHY CHOOSE <span className="text-iptv-green">EASY IPTV</span> ?
           </h2>
-          <p className="mx-auto max-w-xl text-xs text-gray-500">
+          <p className="mx-auto max-w-xl text-sm text-gray-500">
             We deliver a premium streaming experience with unmatched quality and
             reliability. Join millions who trust us for their entertainment needs.
           </p>
@@ -58,7 +58,7 @@ export function Features() {
               </div>
               <div className="flex flex-col">
                 <h3 className="mb-1 text-base font-bold text-gray-900 transition-colors group-hover:text-iptv-green">{feature.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-500">{feature.description}</p>
+                <p className="text-xs leading-relaxed text-gray-500">{feature.description}</p>
               </div>
             </div>
           ))}

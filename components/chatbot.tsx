@@ -29,7 +29,7 @@ export function ChatBot() {
           </div>
           <div>
             <p className="text-[10px] font-black uppercase tracking-widest text-iptv-green mb-1">Easy Support</p>
-            <p className="text-xs font-bold text-gray-700 leading-relaxed">
+            <p className="text-sm font-bold text-gray-700 leading-relaxed">
               If you need any help, our AI assistant is here to guide you through the setup!
             </p>
           </div>
@@ -47,7 +47,7 @@ export function ChatBot() {
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
           "relative flex h-14 w-14 items-center justify-center rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group",
-          isOpen ? "bg-gray-900 rotate-90" : "bg-iptv-green"
+          isOpen ? "bg-iptv-green-dark rotate-90" : "bg-iptv-green"
         )}
         aria-label="Toggle Chatbot"
       >

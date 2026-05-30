@@ -27,14 +27,14 @@ export function AboutHero() {
           <h1 className="mb-4 text-4xl font-black leading-tight md:text-5xl lg:text-6xl uppercase tracking-tight">
             ABOUT <span className="text-iptv-green">EASY IPTV</span>
           </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-xs text-gray-300 md:text-sm uppercase tracking-wider leading-relaxed">
+          <p className="mx-auto mb-8 max-w-2xl text-sm text-gray-300 md:text-sm uppercase tracking-wider leading-relaxed">
             We're revolutionizing the streaming industry with cutting-edge technology, 
             premium content, and exceptional customer service. Your entertainment, redefined.
           </p>
           <div className="flex justify-center">
             <Link
               href="/contact"
-              className="rounded-md bg-iptv-green px-6 py-2.5 text-xs font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
+              className="rounded-md bg-iptv-green px-6 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
             >
               Get In Touch
             </Link>

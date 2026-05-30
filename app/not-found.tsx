@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Home, ArrowLeft } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function NotFound() {
+  const router = useRouter()
+
   return (
     <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-white p-6 text-center overflow-hidden">
       {/* Massive Blurred Background Circle */}
@@ -23,16 +28,16 @@ export default function NotFound() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row justify-center">
-          <Link
-            href="/installation-guide"
-            className="rounded-md bg-iptv-green px-6 py-2.5 text-xs font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20 flex items-center justify-center"
+          <button
+            onClick={() => router.back()}
+            className="rounded-md bg-iptv-green px-6 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20 flex items-center justify-center"
           >
             <ArrowLeft className="mr-2 h-3.5 w-3.5" />
-            Installation Guide
-          </Link>
+            Go Back
+          </button>
           <Link
             href="/"
-            className="rounded-md border border-gray-200 bg-white px-6 py-2.5 text-xs font-bold text-gray-600 transition-all hover:bg-gray-50 hover:scale-105 active:scale-95 flex items-center justify-center"
+            className="rounded-md border border-gray-200 bg-white px-6 py-2.5 text-sm font-bold text-gray-600 transition-all hover:bg-gray-50 hover:scale-105 active:scale-95 flex items-center justify-center"
           >
             <Home className="mr-2 h-3.5 w-3.5" />
             Back to Home
@@ -44,9 +49,9 @@ export default function NotFound() {
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-20">
         <Image 
           src="/logo.svg" 
-          alt="" 
-          width={80} 
-          height={40} 
+          alt="Background Logo" 
+          width={800} 
+          height={800} 
           className="h-10 w-auto grayscale" 
         />
       </div>
