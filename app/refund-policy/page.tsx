@@ -207,7 +207,7 @@ export default function RefundPolicyPage() {
               
               <div className="grid gap-px overflow-hidden rounded-2xl border border-gray-200 bg-gray-200">
                 {[
-                  "Contact our support team at support@easyiptv.ca within 7 days of your purchase date.",
+                  "Contact our support team at support@easyiptv.com within 7 days of your purchase date.",
                   "Include your full name, registered email address, order/transaction ID, and a clear description of the issue.",
                   "Where applicable, attach screenshots or error messages that support your claim.",
                   "Our team will review your request and respond within 2 business days with a decision or a request for further information.",
@@ -312,11 +312,11 @@ export default function RefundPolicyPage() {
               <div className="rounded-xl border border-gray-100 bg-gray-50 p-6 space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-56">Support & Refund Requests:</span>
-                  <a href="mailto:support@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>
+                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-56">Billing Queries:</span>
-                  <a href="mailto:billing@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">billing@easyiptv.ca</a>
+                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-56">Website:</span>

@@ -24,7 +24,9 @@ export function Hero() {
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="#pricing"
+              href="https://wa.me/16728962606?text=Hello!%20I%20am%20interested%20in%20starting%20a%20*Free%20Trial*%20for%20*Easy%20IPTV*."
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-md bg-iptv-green px-6 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
             >
               Start Free Trial

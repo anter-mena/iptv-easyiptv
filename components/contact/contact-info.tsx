@@ -12,14 +12,14 @@ const contactItems = [
   {
     icon: Phone,
     title: "Phone Support",
-    desc: "+1 (555) 123-4567",
+    desc: "+1 (672) 896-2606",
     tag: "02 / Direct",
     sub: "Available 24/7",
   },
   {
     icon: MapPin,
     title: "Office Address",
-    desc: "123 Streaming Avenue, Tech District, TD 12345",
+    desc: "123 Maple Street, Suite 400, Toronto, ON M5V 2T6, Canada",
     tag: "03 / Location",
     sub: "HQ Headquarters",
   },
@@ -109,10 +109,11 @@ export function ContactInfo() {
       </div>
 
       {/* Mini Map Placeholder to fill space */}
-      <div className="mt-6 flex h-32 items-center justify-center rounded-2xl bg-gray-50 border border-gray-200">
-        <div className="text-center">
-          <MapIcon className="mx-auto mb-2 h-6 w-6 text-gray-300" />
-          <p className="text-[9px] font-black text-gray-400 uppercase tracking-[0.2em]">Live Support Tracking</p>
+      <div className="mt-6 flex h-32 items-center justify-center rounded-2xl bg-gray-50 border border-gray-200 border-dashed">
+        <div className="text-center opacity-70">
+          <MapIcon className="mx-auto mb-3 h-6 w-6 text-gray-400" />
+          <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-1">Live Support Tracking</p>
+          <span className="inline-block rounded-full bg-iptv-green/10 px-2.5 py-0.5 text-[8px] font-bold uppercase tracking-wider text-iptv-green">Coming Soon</span>
         </div>
       </div>
     </div>

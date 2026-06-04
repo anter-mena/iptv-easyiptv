@@ -127,7 +127,12 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contact" className="mb-5 block w-full rounded-md bg-iptv-green py-2.5 px-4 text-center text-xs font-bold text-white transition-all hover:bg-iptv-green-dark ring-4 ring-iptv-green/20">
+              <Link 
+                href={`https://wa.me/16728962606?text=${encodeURIComponent(`Hello! I want to subscribe to *Easy IPTV*.\n\n*Plan:* ${plan.name}\n*Devices:* ${plan.connections}\n*Price:* $${plan.price} CAD`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-5 block w-full rounded-md bg-iptv-green py-2.5 px-4 text-center text-xs font-bold text-white transition-all hover:bg-iptv-green-dark ring-4 ring-iptv-green/20"
+              >
                 Get Started
               </Link>
               

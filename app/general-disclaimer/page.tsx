@@ -353,11 +353,11 @@ export default function GeneralDisclaimerPage() {
               <div className="rounded-xl border border-gray-100 bg-gray-50 p-6 space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">General Enquiries:</span>
-                  <a href="mailto:support@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>
+                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">Legal & DMCA:</span>
-                  <a href="mailto:legal@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">legal@easyiptv.ca</a>
+                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">DMCA Report Page:</span>

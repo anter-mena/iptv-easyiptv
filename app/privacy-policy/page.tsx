@@ -319,7 +319,7 @@ export default function PrivacyPolicyPage() {
                   Exercising Your Rights
                 </h4>
                 <p className="text-sm leading-relaxed text-gray-700 font-medium">
-                  To exercise any of these rights, please contact our Privacy Team at <a href="mailto:privacy@easyiptv.ca" className="text-iptv-green hover:underline">privacy@easyiptv.ca</a>. We will respond within 30 days (GDPR) or 45 days (CCPA). We may need to verify your identity before processing your request.
+                  To exercise any of these rights, please contact our Privacy Team at <a href="mailto:support@easyiptv.com" className="text-iptv-green hover:underline">support@easyiptv.com</a>. We will respond within 30 days (GDPR) or 45 days (CCPA). We may need to verify your identity before processing your request.
                 </p>
               </div>
             </div>
@@ -446,11 +446,11 @@ export default function PrivacyPolicyPage() {
               <div className="rounded-xl border border-gray-100 bg-gray-50 p-6 space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">Privacy Team:</span>
-                  <a href="mailto:privacy@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">privacy@easyiptv.ca</a>
+                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">General Support:</span>
-                  <a href="mailto:support@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>
+                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">Website:</span>
