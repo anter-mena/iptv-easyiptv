@@ -27,28 +27,28 @@ const commonFeatures = [
 
 const plansData: Record<number, Plan[]> = {
   1: [
-    { name: "1 Month", price: "29", features: commonFeatures, popular: false, connections: "1 Device" },
-    { name: "3 Month", price: "49", features: commonFeatures, popular: false, connections: "1 Device" },
-    { name: "6 Month", price: "89", features: commonFeatures, popular: true, connections: "1 Device" },
-    { name: "12 Month", price: "129", features: commonFeatures, popular: false, connections: "1 Device" },
+    { name: "1 Month", price: "19", features: commonFeatures, popular: false, connections: "1 Device" },
+    { name: "3 Month", price: "29", features: commonFeatures, popular: false, connections: "1 Device" },
+    { name: "6 Month", price: "49", features: commonFeatures, popular: true, connections: "1 Device" },
+    { name: "12 Month", price: "79", features: commonFeatures, popular: false, connections: "1 Device" },
   ],
   2: [
-    { name: "1 Month", price: "39", features: commonFeatures, popular: false, connections: "2 Devices" },
-    { name: "3 Month", price: "69", features: commonFeatures, popular: false, connections: "2 Devices" },
-    { name: "6 Month", price: "119", features: commonFeatures, popular: true, connections: "2 Devices" },
-    { name: "12 Month", price: "179", features: commonFeatures, popular: false, connections: "2 Devices" },
+    { name: "1 Month", price: "29", features: commonFeatures, popular: false, connections: "2 Devices" },
+    { name: "3 Month", price: "49", features: commonFeatures, popular: false, connections: "2 Devices" },
+    { name: "6 Month", price: "89", features: commonFeatures, popular: true, connections: "2 Devices" },
+    { name: "12 Month", price: "129", features: commonFeatures, popular: false, connections: "2 Devices" },
   ],
   3: [
-    { name: "1 Month", price: "49", features: commonFeatures, popular: false, connections: "3 Devices" },
-    { name: "3 Month", price: "89", features: commonFeatures, popular: false, connections: "3 Devices" },
-    { name: "6 Month", price: "129", features: commonFeatures, popular: true, connections: "3 Devices" },
-    { name: "12 Month", price: "199", features: commonFeatures, popular: false, connections: "3 Devices" },
+    { name: "1 Month", price: "39", features: commonFeatures, popular: false, connections: "3 Devices" },
+    { name: "3 Month", price: "69", features: commonFeatures, popular: false, connections: "3 Devices" },
+    { name: "6 Month", price: "119", features: commonFeatures, popular: true, connections: "3 Devices" },
+    { name: "12 Month", price: "179", features: commonFeatures, popular: false, connections: "3 Devices" },
   ],
   4: [
-    { name: "1 Month", price: "59", features: commonFeatures, popular: false, connections: "4 Devices" },
-    { name: "3 Month", price: "109", features: commonFeatures, popular: false, connections: "4 Devices" },
-    { name: "6 Month", price: "159", features: commonFeatures, popular: true, connections: "4 Devices" },
-    { name: "12 Month", price: "219", features: commonFeatures, popular: false, connections: "4 Devices" },
+    { name: "1 Month", price: "49", features: commonFeatures, popular: false, connections: "4 Devices" },
+    { name: "3 Month", price: "89", features: commonFeatures, popular: false, connections: "4 Devices" },
+    { name: "6 Month", price: "129", features: commonFeatures, popular: true, connections: "4 Devices" },
+    { name: "12 Month", price: "199", features: commonFeatures, popular: false, connections: "4 Devices" },
   ],
 }
 
