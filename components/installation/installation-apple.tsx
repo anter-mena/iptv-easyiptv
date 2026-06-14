@@ -128,7 +128,7 @@ export function InstallationApple() {
  title:"Download iMPlayer - IPTV Player from App Store",
  desc:"Search for \"iMPlayer\" in the App Store and download the official app",
  tag:"Step 1 - Download iMPlayer",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/apple/01.png"
+ img:"/assets/installationGuide/apple/01.png"
  },
  {
  title:"Open the app and click on \"Add a Playlist\"",
@@ -171,7 +171,7 @@ export function InstallationApple() {
  title:"Open app and tap Add User, select Login with Xtream Codes API",
  desc:"Launch Smarters Player Lite and choose the Xtream Codes login option",
  tag:"Step 1 - Login with Xtream Codes",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/apple/02.png"
+ img:"/assets/installationGuide/apple/02.png"
  },
  {
  title:"Use the login details provided to you after subscribing. Then click on \"ADD USER\" to continue",
@@ -185,7 +185,7 @@ export function InstallationApple() {
  title:"Tap the \"Live TV\" icon to start watching",
  desc:"Navigate to the Live TV section to access your channels",
  tag:"Step 4 - Live TV Access",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/apple/03.png"
+ img:"/assets/installationGuide/apple/03.png"
  },
  {
  title:"Select the channel category you want to browse and tap a channel name to play it",

@@ -259,7 +259,7 @@ export function SiteFooter() {
                 {["visa", "mastercard", "paypal", "applePay", "googlePay"].map((method) => (
                   <Image
                     key={method}
-                    src={`https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@47235c0f90fdb23a309d0c92e0ac8bde84ff363b/iptv/tools/${method}.svg`}
+                    src={`/assets/payment/${method}.svg`}
                     alt={method}
                     width={method === "visa" ? 64 : 48}
                     height={32}

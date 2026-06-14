@@ -156,62 +156,62 @@ export function InstallationAndroidTv() {
  title:"Enter the Downloader code for V12Mate: 2494311 → press GO",
  desc:"Type the code exactly as shown and press GO to download V12Mate",
  tag:"Step 5 - Enter Code",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/01.png"
+ img:"/assets/installationGuide/androidTV/01.png"
  },
  {
  title:"Accept Privacy Policy → Install → confirm Install again if asked",
  desc:"Accept the privacy policy and proceed with installation",
  tag:"Step 6 - Accept Policy",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/02.png"
+ img:"/assets/installationGuide/androidTV/02.png"
  },
  {
  title:"Press Install → wait until installed",
  desc:"Complete the installation process and wait for it to finish",
  tag:"Step 7 - Installing",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/03.png"
+ img:"/assets/installationGuide/androidTV/03.png"
  },
  {
  title:"When complete, press OPEN",
  desc:"Launch V12Mate for the first time",
  tag:"Step 8 - Press Open",
  alert:"If you already have TiviMate installed, please uninstall it first — otherwise V12Mate will not install.",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/04.png"
+ img:"/assets/installationGuide/androidTV/04.png"
  },
  {
  title:"Press Add playlist",
  desc:"Start the setup process by adding your IPTV playlist",
  tag:"Step 9 - Add Playlist",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/05.png"
+ img:"/assets/installationGuide/androidTV/05.png"
  },
  {
  title:"Press V12MATE",
  desc:"Select the V12MATE option for automatic configuration. If you only see \"Cancel\", click it to fix it.",
  tag:"Step 10 - Press V12MATE",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/06.png"
+ img:"/assets/installationGuide/androidTV/06.png"
  },
  {
  title:"Enter your Credentials - (No server URL is needed since it's our player.)",
  desc:"Input your username and password - no server URL required for V12Mate",
  tag:"Step 11 - Enter Credentials",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/07.png"
+ img:"/assets/installationGuide/androidTV/07.png"
  },
  {
  title:"Press Next, Make sure to keep VOD and TV channels selected",
  desc:"Ensure both live TV and video-on-demand options are enabled",
  tag:"Step 12 - VOD and TV Selection",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/08.png"
+ img:"/assets/installationGuide/androidTV/08.png"
  },
  {
  title:"Wait for it to process, (about 1 minute)",
  desc:"Allow the app to configure your IPTV settings",
  tag:"Step 13 - Processing",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/09.png"
+ img:"/assets/installationGuide/androidTV/09.png"
  },
  {
  title:"Press Done, wait few seconds. You're ready to watch!",
  desc:"Setup complete! Start enjoying your IPTV service on Android TV",
  tag:"Step 14 - Setup Complete",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/10.png"
+ img:"/assets/installationGuide/androidTV/10.png"
  }
  ]} />
 

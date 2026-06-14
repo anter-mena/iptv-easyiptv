@@ -29,7 +29,7 @@ export function ContentLibrary() {
                   className="flex h-12 w-24 shrink-0 items-center justify-center rounded-lg bg-white p-2 shadow-sm border border-gray-100"
                 >
                   <Image
-                    src={`https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@9732f925f0b8e99efd384fc7adced2d48b24bcb3/iptv/channel/${i + 1}.svg`}
+                    src={`/assets/channels/${i + 1}.svg`}
                     alt={`Premium Live TV Channel ${i + 1} Stream`}
                     width={80}
                     height={40}
@@ -53,7 +53,7 @@ export function ContentLibrary() {
                   className="relative h-48 w-32 shrink-0 overflow-hidden rounded-xl bg-white shadow-md border border-gray-100 transition-transform hover:scale-105"
                 >
                   <Image
-                    src={`https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/iptv/programs/sp${i + 1}.png`}
+                    src={`/assets/programs/sp${i + 1}.png`}
                     alt={`Live Sports Streaming Event ${i + 1}`}
                     fill
                     className="object-cover"
@@ -72,7 +72,7 @@ export function ContentLibrary() {
                   className="relative h-48 w-32 shrink-0 overflow-hidden rounded-xl bg-white shadow-md border border-gray-100 transition-transform hover:scale-105"
                 >
                   <Image
-                    src={`https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/iptv/movies/${(i + 1).toString().padStart(2, "0")}.jpg`}
+                    src={`/assets/movies/${(i + 1).toString().padStart(2, "0")}.jpg`}
                     alt={`HD VOD Movie Stream ${i + 1}`}
                     fill
                     className="object-cover"

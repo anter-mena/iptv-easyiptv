@@ -150,8 +150,8 @@ export function InstallationFirestick() {
  <div className="mb-8 overflow-hidden rounded-2xl bg-black shadow-2xl border-4 border-black ring-4 ring-black/5">
  <VideoZoom 
  sources={[
- { src:"https://github.com/ChaosAfterParty/email_models/raw/refs/heads/main/iptv/installation-guide/android%20TV/video.webm", type:"video/webm" },
- { src:"https://github.com/ChaosAfterParty/email_models/raw/refs/heads/main/iptv/installation-guide/android%20TV/video.mp4", type:"video/mp4" }
+ { src:"https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Iptv/assets/video.webm", type:"video/webm" },
+ { src:"https://cdn.jsdelivr.net/gh/anter-mena/antermena-assets@main/Iptv/assets/video.mp4", type:"video/mp4" }
  ]}
  />
  </div>
@@ -254,62 +254,62 @@ export function InstallationFirestick() {
  title:"Enter the Downloader code for V12Mate: 2494311 → press GO", 
  desc:"Type the code exactly as shown and press GO to download V12Mate",
  tag:"Step 4 - Enter Code",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/01.png"
+ img:"/assets/installationGuide/androidTV/01.png"
  },
  { 
  title:"Accept Privacy Policy → Install → confirm Install again if asked", 
  desc:"Accept the privacy policy and proceed with installation",
  tag:"Step 5 - Accept Policy",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/02.png"
+ img:"/assets/installationGuide/androidTV/02.png"
  },
  { 
  title:"Press Install → wait until installed", 
  desc:"Complete the installation process and wait for it to finish",
  tag:"Step 6 - Installing",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/03.png"
+ img:"/assets/installationGuide/androidTV/03.png"
  },
  { 
  title:"When complete, press OPEN", 
  desc:"Launch V12Mate for the first time",
  tag:"Step 7 - Press Open",
  alert:"If you already have TiviMate installed, please uninstall it first — otherwise V12Mate will not install.",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/04.png"
+ img:"/assets/installationGuide/androidTV/04.png"
  },
  { 
  title:"Press Add playlist", 
  desc:"Start the setup process by adding your IPTV playlist",
  tag:"Step 8 - Add Playlist",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/05.png"
+ img:"/assets/installationGuide/androidTV/05.png"
  },
  { 
  title:"Press V12MATE", 
  desc:"Select the V12MATE option for automatic configuration",
  tag:"Step 9 - Press V12MATE",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/06.png"
+ img:"/assets/installationGuide/androidTV/06.png"
  },
  { 
  title:"Enter your Credentials - (No Server Address is needed since it's our player.)", 
  desc:"Input your username and password - no server URL required for V12Mate",
  tag:"Step 10 - Enter Credentials",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/07.png"
+ img:"/assets/installationGuide/androidTV/07.png"
  },
  { 
  title:"Press Next, Make sure to keep VOD and TV channels selected", 
  desc:"Ensure both live TV and video-on-demand options are enabled",
  tag:"Step 11 - VOD and TV Selection",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/08.png"
+ img:"/assets/installationGuide/androidTV/08.png"
  },
  { 
  title:"Wait for it to process, (about 1 minute)", 
  desc:"Allow the app to configure your IPTV settings",
  tag:"Step 12 - Processing",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/09.png"
+ img:"/assets/installationGuide/androidTV/09.png"
  },
  { 
  title:"Press Done, wait few seconds. You're ready to watch!", 
  desc:"Setup complete! Start enjoying your IPTV service on Fire TV Stick",
  tag:"Step 13 - Setup Complete",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android%20TV/10.png"
+ img:"/assets/installationGuide/androidTV/10.png"
  }
  ]} />
 

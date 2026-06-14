@@ -144,7 +144,7 @@ export function Pricing() {
                     className="flex h-16 items-center justify-center rounded p-1 transition-transform duration-300 hover:scale-110"
                   >
                     <Image
-                      src={`https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@4314925c1fc90e64e1c8a64c0e6cbef87ac719b6/iptv/tools/${device}.svg`}
+                      src={`/assets/devices/${device}.svg`}
                       alt={device}
                       width={40}
                       height={40}

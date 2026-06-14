@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils"
 
 const reviews = [...Array(10)].map((_, i) => ({
   id: i + 1,
-  img: `https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/iptv/reviews/${i + 1}.png`,
+  img: `/assets/reviews/${i + 1}.png`,
 }))
 
 export function Reviews() {

@@ -126,7 +126,7 @@ export function InstallationFormuler() {
  title:"Navigate to Menu → Connections → Add Portal",
  desc:"Access the main menu, go to Connections, then select Add Portal",
  tag:"Step 2 - Add Portal",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/Formuler-Dreamlink/01.png"
+ img:"/assets/installationGuide/formulerDreamlink/01.png"
  },
  {
  title:"Configure your Xtream Codes connection",
@@ -171,7 +171,7 @@ export function InstallationFormuler() {
  title:"Go to Menu → Portals → Edit Portal",
  desc:"Access the main menu, navigate to Portals, then select Edit Portal",
  tag:"Step 2 - Edit Portal",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/Formuler-Dreamlink/02.png"
+ img:"/assets/installationGuide/formulerDreamlink/02.png"
  },
  {
  title:"Enter your portal configuration",
@@ -184,7 +184,7 @@ export function InstallationFormuler() {
 "Username: Your credentials",
 "Password: Your credentials"
  ],
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/Formuler-Dreamlink/03.png"
+ img:"/assets/installationGuide/formulerDreamlink/03.png"
  },
  {
  title:"Save the configuration and restart the app to connect",

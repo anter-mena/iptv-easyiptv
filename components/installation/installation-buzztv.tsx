@@ -70,19 +70,19 @@ export function InstallationBuzzTv() {
  title:"From your BuzzTV home screen, navigate to Server Settings",
  desc:"Access the main settings menu and locate Server Settings option",
  tag:"Step 1 - Server Settings",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/buzzTV%20box/01.png"
+ img:"/assets/installationGuide/buzzTVBox/01.png"
  },
  {
  title:"Select XC API Login → Add XC API Login",
  desc:"Choose the XC API Login option and then select Add XC API Login to create a new connection",
  tag:"Step 2 - Add XC API Login",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/buzzTV%20box/02.png"
+ img:"/assets/installationGuide/buzzTVBox/02.png"
  },
  {
  title:"Configure your Xtream Codes connection",
  desc:"",
  tag:"Step 3 - Configure Connection",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/buzzTV%20box/03.png",
+ img:"/assets/installationGuide/buzzTVBox/03.png",
  bullets: [
 "Portal Name: Enter any name (e.g., \"My IPTV\")",
 "Portal URL: Enter your server URL",

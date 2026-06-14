@@ -148,13 +148,13 @@ export function InstallationPc() {
  title:"Navigate to Downloads",
  desc:"Click on the \"Downloads\" section in the website menu",
  tag:"Step 3 - Downloads section",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/windows/01.png"
+ img:"/assets/installationGuide/windows/01.png"
  },
  {
  title:"Download the application",
  desc:"Download the Windows or Mac version of IPTV Smarters Pro",
  tag:"Step 4 - Download application",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/windows/02.png"
+ img:"/assets/installationGuide/windows/02.png"
  },
  {
  title:"Run the installer",
@@ -205,7 +205,7 @@ export function InstallationPc() {
  title:"Access Settings",
  desc:"Go to the Settings tab, then click on \"Add new playlist and EPG source\"",
  tag:"MyIPTV Settings",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/windows/03.png"
+ img:"/assets/installationGuide/windows/03.png"
  },
  {
  title:"Add your M3U playlist",
@@ -216,19 +216,19 @@ export function InstallationPc() {
 "URL: Paste the M3U link you received from your IPTV provider",
 "Click on \"Add remote list\""
  ],
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/windows/04.png"
+ img:"/assets/installationGuide/windows/04.png"
  },
  {
  title:"Select your playlist",
  desc:"Go back to Settings and choose your playlist from the Select Channel Playlist dropdown",
  tag:"Select playlist",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/windows/05.png"
+ img:"/assets/installationGuide/windows/05.png"
  },
  {
  title:"Start watching",
  desc:"Done! Go to the Channels tab, choose your country, and start watching your favorite TV and VOD content",
  tag:"Start watching",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/windows/06.png"
+ img:"/assets/installationGuide/windows/06.png"
  }
  ]} />
 

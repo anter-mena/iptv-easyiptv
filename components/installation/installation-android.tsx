@@ -136,7 +136,7 @@ export function InstallationAndroid() {
  title:"Download iMPlayer - IPTV Player from Google Play Store",
  desc:"Search for \"iMPlayer\" in the Google Play Store and download the official mobile app",
  tag:"Step 1 - Download iMPlayer",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android/01.png"
+ img:"/assets/installationGuide/android/01.png"
  },
  {
  title:"Open the app and click on \"Add a Playlist\"",
@@ -195,7 +195,7 @@ export function InstallationAndroid() {
  title:"Tap Install and wait for completion",
  desc:"Download and install the TiviMate application to your device",
  tag:"Step 2 - Install TiviMate",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android/02.png"
+ img:"/assets/installationGuide/android/02.png"
  },
  {
  title:"Open TiviMate, tap Add Playlist",
@@ -238,7 +238,7 @@ export function InstallationAndroid() {
  title:"Go to the official site: tivimate.com and download the APK",
  desc:"Visit the official TiviMate website to download the APK file",
  tag:"Step 1 - Download APK",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/android/03.png"
+ img:"/assets/installationGuide/android/03.png"
  },
  {
  title:"Allow installs from unknown sources if prompted (Settings > Security)",

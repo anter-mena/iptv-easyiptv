@@ -46,7 +46,7 @@ export function Hero() {
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
               <div key={`logo-${i}`} className="flex h-12 w-24 shrink-0 items-center justify-center px-4">
                 <Image
-                  src={`https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@639e31403aeabe3b506c21bc02345a616a3da952/iptv/assets/${i}.svg`}
+                  src={`/assets/channel4hero/${i}.svg`}
                   alt={`Premium IPTV Live Channel Partner ${i}`}
                   width={96}
                   height={48}

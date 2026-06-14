@@ -171,7 +171,7 @@
         rgba(0, 0, 0, 0.7) 0%,
         rgba(0, 0, 0, 0.9) 100%
       ),
-      url("https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models@main/iptv/assets/bg.jpg");
+      url("/assets/bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

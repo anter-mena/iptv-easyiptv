@@ -138,7 +138,7 @@ export function InstallationRoku() {
  title:"In the search bar, type \"Hot IPTV\" or \"Hot Player\"",
  desc:"Use the search function to find the Hot Player application",
  tag:"Step 2 - Search Hot Player",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/roku/01.png"
+ img:"/assets/installationGuide/roku/01.png"
  },
  {
  title:"Select Hot Player from the search results",
@@ -169,7 +169,7 @@ export function InstallationRoku() {
  title:"Open the Hot Player app on your Roku device",
  desc:"Launch the Hot Player application you just installed",
  tag:"Step 1 - Open Hot Player",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/roku/02.png"
+ img:"/assets/installationGuide/roku/02.png"
  },
  {
  title:"You will see your MAC Address displayed on the screen. Write this down or take a photo - you'll need it for the next step",
@@ -204,13 +204,13 @@ export function InstallationRoku() {
  title:"Enter the MAC Address from your Roku device, then click \"Next\"",
  desc:"Input the MAC Address you noted from your Roku device",
  tag:"Step 3 - Enter MAC Address",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/roku/03.png"
+ img:"/assets/installationGuide/roku/03.png"
  },
  {
  title:"Change Source to \"Xtream Code\"",
  desc:"Select Xtream Code as your configuration method",
  tag:"Step 4 - Select Xtream Code",
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/roku/04.png"
+ img:"/assets/installationGuide/roku/04.png"
  },
  {
  title:"Fill in your IPTV playlist details",
@@ -222,7 +222,7 @@ export function InstallationRoku() {
 "Username: Your IPTV username",
 "Password: Your IPTV password"
  ],
- img:"https://cdn.jsdelivr.net/gh/ChaosAfterParty/email_models/iptv/installation-guide/roku/05.png"
+ img:"/assets/installationGuide/roku/05.png"
  },
  {
  title:"Return to your Roku device click Refresh or restart the Hot Player app",
