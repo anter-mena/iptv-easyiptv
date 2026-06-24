@@ -230,11 +230,11 @@ export function SiteHeader() {
       {/* Mobile Menu Container */}
       <div
         className={cn(
-          "absolute top-full left-0 right-0 z-[9999] -mt-px border-b border-gray-200 bg-white shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out lg:hidden",
-          isMobileMenuOpen ? "max-h-[90vh] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4 pointer-events-none overflow-hidden"
+          "absolute top-full left-0 right-0 z-[9999] -mt-px overflow-hidden border-b border-gray-200 bg-white shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out lg:hidden",
+          isMobileMenuOpen ? "max-h-[90vh] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4 pointer-events-none"
         )}
       >
-        <nav className="p-4 overflow-y-auto">
+        <nav className="max-h-[90vh] overflow-y-auto overscroll-contain p-4">
           <div className="space-y-1">
             <Link
               href="/#pricing"
@@ -256,7 +256,7 @@ export function SiteHeader() {
             </Link>
 
             {/* Mobile Installation Accordion */}
-            <div className="py-1 border-b border-gray-100">
+            <div className="rounded-md py-1 border-b border-gray-100">
               <button
                 onClick={() => toggleMobileAccordion('installation')}
                 className={cn(
@@ -293,7 +293,7 @@ export function SiteHeader() {
             <Link
               href="/about"
               className={cn(
-                "block rounded-md px-2 py-3 text-sm font-semibold border-t border-gray-100 transition-colors hover:bg-gray-50",
+                "block rounded-md px-2 py-3 text-sm font-semibold transition-colors hover:bg-gray-50",
                 isActive("/about") ? "text-iptv-green" : "text-gray-900"
               )}
             >

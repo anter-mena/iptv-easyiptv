@@ -82,7 +82,7 @@ export function Pricing() {
                 aria-pressed={activeTab === num}
                 onClick={() => setActiveTab(num)}
                 className={cn(
-                  "whitespace-nowrap rounded-md px-6 py-3 text-sm sm:px-8 font-bold transition-all duration-300 flex-1 sm:flex-none text-center",
+                  "whitespace-nowrap rounded-md px-2.5 py-2 text-[11px] sm:px-8 sm:py-3 sm:text-sm font-bold transition-all duration-300 flex-1 sm:flex-none text-center",
                   activeTab === num ? "bg-iptv-green text-white shadow-md" : "text-gray-500 hover:text-gray-700"
                 )}
               >

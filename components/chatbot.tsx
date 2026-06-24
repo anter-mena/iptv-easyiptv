@@ -27,13 +27,13 @@ export function ChatBot() {
 
   return (
     <div className={cn(
-      "fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-4 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
+      "fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-4 pointer-events-none transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
       isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
     )}>
       {/* Contact Options Panel */}
       <div className={cn(
         "mb-2 rounded-2xl bg-card/90 backdrop-blur-2xl border border-white/20 dark:border-white/10 p-4 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] dark:shadow-black/50 transition-all duration-500 w-[250px] origin-bottom-right",
-        isOpen ? "scale-100 opacity-100 translate-y-0" : "scale-90 opacity-0 translate-y-8 pointer-events-none"
+        isOpen ? "scale-100 opacity-100 translate-y-0 pointer-events-auto" : "scale-90 opacity-0 translate-y-8 pointer-events-none"
       )}>
         <div className="mb-3.5 px-1">
           <p className="text-[8.5px] font-black uppercase tracking-[0.2em] text-iptv-green mb-1 opacity-80">Support Options</p>
@@ -91,7 +91,7 @@ export function ChatBot() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "relative flex h-16 w-16 items-center justify-center rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-500 hover:scale-105 active:scale-95 group",
+          "relative flex h-16 w-16 items-center justify-center rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-500 hover:scale-105 active:scale-95 group pointer-events-auto",
           isOpen ? "bg-iptv-green-dark rotate-90" : "bg-gradient-to-br from-iptv-green to-iptv-green-dark"
         )}
         aria-label="Toggle Support Options"
