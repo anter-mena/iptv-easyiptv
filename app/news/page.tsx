@@ -5,18 +5,18 @@ import { ArrowUpRight, Newspaper } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { CTA } from "@/components/home/home-cta";
 import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
-import { getAllPosts } from "@/lib/blog";
+import { getAllNews } from "@/lib/news";
 
 const base = buildMetadata({
-  title: "Blog | Easy IPTV",
+  title: "News | Easy IPTV",
   description:
-    "Streaming guides, device setup walkthroughs, and cord-cutting tips from the Easy IPTV team — everything you need to get more out of your subscription.",
-  path: "/blog",
+    "Streaming and IPTV industry news — new sports rights, platform launches, piracy enforcement, and cord-cutting trends, explained in plain English.",
+  path: "/news",
   keywords: [
-    "iptv blog",
-    "streaming tips",
-    "cord cutting guide",
-    "easy iptv blog",
+    "iptv news",
+    "streaming industry news",
+    "cord cutting news",
+    "easy iptv news",
   ],
 });
 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   alternates: {
     ...base.alternates,
     types: {
-      "application/rss+xml": `${BASE_URL}/blog/feed.xml`,
+      "application/rss+xml": `${BASE_URL}/news/feed.xml`,
     },
   },
 };
@@ -42,68 +42,68 @@ function formatDate(iso: string) {
       });
 }
 
-export default function BlogIndex() {
-  const posts = getAllPosts();
+export default function NewsIndex() {
+  const items = getAllNews();
 
   const breadcrumb = breadcrumbJsonLd([
     { name: "Home", path: "/" },
-    { name: "Blog", path: "/blog" },
+    { name: "News", path: "/news" },
   ]);
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: posts.map((p, i) => ({
+    itemListElement: items.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: p.title,
-      url: `${BASE_URL}/blog/${p.slug}`,
+      url: `${BASE_URL}/news/${p.slug}`,
     })),
   };
 
   return (
     <main className="flex-1 bg-white">
-      <Script id="blog-breadcrumb" type="application/ld+json" strategy="afterInteractive">
+      <Script id="news-breadcrumb" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(breadcrumb)}
       </Script>
-      <Script id="blog-itemlist" type="application/ld+json" strategy="afterInteractive">
+      <Script id="news-itemlist" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(itemListJsonLd)}
       </Script>
 
       <PageHero
-        subtitle="Latest News & Updates"
-        title="Our Blog"
-        description="Streaming guides, device setup walkthroughs, and cord-cutting tips from the Easy IPTV team."
+        subtitle="Streaming Industry"
+        title="IPTV News"
+        description="New sports rights, platform launches, and cord-cutting trends — reported in plain English."
       />
 
       <section className="bg-white py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {posts.length === 0 ? (
+          {items.length === 0 ? (
             <div className="mx-auto flex max-w-md flex-col items-center text-center">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
                 <Newspaper className="h-8 w-8 text-gray-400" strokeWidth={1.5} />
               </div>
               <h2 className="mb-4 text-2xl font-bold uppercase tracking-tight text-gray-900">
-                New Content <span className="text-iptv-green">Coming Soon</span>
+                News <span className="text-iptv-green">Coming Soon</span>
               </h2>
               <p className="mb-8 text-sm leading-relaxed text-gray-500">
-                We are currently preparing streaming guides, setup tutorials, and IPTV industry
-                news. Check back soon for our first post.
+                We are tracking the streaming and IPTV industry — new sports rights, platform
+                launches, and cord-cutting trends. Check back soon for the latest updates.
               </p>
               <Link
-                href="/installation-guide"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4 transition-all hover:decoration-iptv-green hover:text-iptv-green"
+                href="/blog"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4 transition-all hover:text-iptv-green hover:decoration-iptv-green"
               >
-                In the meantime, explore our installation guides
+                In the meantime, read the blog
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {posts.map((post) => (
+              {items.map((post) => (
                 <Link
                   key={post.slug}
-                  href={`/blog/${post.slug}`}
+                  href={`/news/${post.slug}`}
                   className="group flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-gray-50 shadow-sm transition-all hover:border-iptv-green/40 hover:shadow-md"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">

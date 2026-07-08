@@ -126,6 +126,16 @@ export function SiteHeader() {
               >
                 Blog
               </Link>
+              <Link
+                href="/news"
+                className={cn(
+                  "relative px-4 py-2 text-sm font-medium transition-colors",
+                  isActive("/news") ? "text-iptv-green after:scale-x-100" : "text-gray-500 hover:text-gray-900 after:scale-x-0 hover:after:scale-x-100",
+                  "after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-iptv-green after:transition-transform after:duration-300"
+                )}
+              >
+                News
+              </Link>
 
               {/* Installation Dropdown */}
               <div 
@@ -253,6 +263,15 @@ export function SiteHeader() {
               )}
             >
               Blog
+            </Link>
+            <Link
+              href="/news"
+              className={cn(
+                "block rounded-md px-2 py-3 text-sm font-semibold border-b border-gray-100 transition-colors hover:bg-gray-50",
+                pathname.startsWith("/news") ? "text-iptv-green" : "text-gray-900"
+              )}
+            >
+              News
             </Link>
 
             {/* Mobile Installation Accordion */}

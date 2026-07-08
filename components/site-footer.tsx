@@ -133,6 +133,7 @@ export function SiteFooter() {
                 { name: "Pricing Plans", href: "/#pricing" },
                 { name: "Free Trial", href: "/#pricing" },
                 { name: "Blog", href: "/blog" },
+                { name: "News", href: "/news" },
                 { name: "About Us", href: "/about" },
                 { name: "Contact Support", href: "/contact" },
               ].map((link) => (

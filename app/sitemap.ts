@@ -1,7 +1,23 @@
 import { MetadataRoute } from 'next'
+import { getAllPosts } from '@/lib/blog'
+import { getAllNews } from '@/lib/news'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://easyiptv.ca'
+
+  const blogPosts: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(`${post.updated}T00:00:00Z`),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }))
+
+  const newsPosts: MetadataRoute.Sitemap = getAllNews().map((item) => ({
+    url: `${baseUrl}/news/${item.slug}`,
+    lastModified: new Date(`${item.updated}T00:00:00Z`),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }))
 
   return [
     {
@@ -40,6 +56,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/news`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    ...blogPosts,
+    ...newsPosts,
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
