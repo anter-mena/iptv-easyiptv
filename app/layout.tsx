@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Easy IPTV - Premium Streaming Experience",
     description: "The ultimate platform for easy and high-quality IPTV streaming.",
   },
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.webmanifest",
   robots: "index, follow",
   alternates: { canonical: "https://easyiptv.ca/" },
   themeColor: "#7fa409",
