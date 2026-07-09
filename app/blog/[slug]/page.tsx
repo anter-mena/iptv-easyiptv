@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
+import { PostImage } from "@/components/blog/post-image";
 import rehypeRaw from "rehype-raw";
 import { ArrowUpRight } from "lucide-react";
 import { CTA } from "@/components/home/home-cta";
@@ -154,7 +155,7 @@ export default async function BlogPost({ params }: { params: Params }) {
           <article className="mx-auto w-full min-w-0 max-w-[760px] lg:mx-0">
             <TableOfContents items={toc} variant="mobile" />
             <div className="blog-prose prose prose-lg max-w-none">
-              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug]}>
+              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug]} components={{ img: PostImage }}>
                 {content}
               </ReactMarkdown>
             </div>
