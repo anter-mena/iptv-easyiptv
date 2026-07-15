@@ -28,7 +28,7 @@ export function buildMetadata({
       description,
       url,
       siteName: SITE_NAME,
-      locale: "en_US",
+      locale: "en_CA",
       type: "website",
     },
     twitter: {
