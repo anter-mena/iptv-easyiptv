@@ -1,0 +1,277 @@
+---
+title: "IPTV EPG Not Working? 9 Proven Fixes for Every Device"
+description: "IPTV EPG not working? Use 9 proven fixes for blank guides, wrong times and missing channels on Fire TV, Android TV, Samsung TV and other devices."
+date: "2026-07-17"
+updated: "2026-07-17"
+category: "Troubleshooting"
+image: "https://images.pexels.com/photos/4009407/pexels-photo-4009407.jpeg?auto=compress&cs=tinysrgb&w=1200"
+focusKeyword: "IPTV EPG not working"
+keywords:
+  - "IPTV EPG not working"
+  - "IPTV guide not loading"
+  - "IPTV EPG wrong time"
+  - "refresh EPG IPTV"
+  - "XMLTV guide troubleshooting"
+  - "IPTV channels no information"
+faqs:
+  - question: "Why is my IPTV EPG not working?"
+    answer: "The usual causes are an expired or incorrect EPG URL, a temporary provider outage, failed guide refresh, channel IDs that do not match the guide, an incorrect device time zone, stale app data or insufficient storage. Test whether all channels or only a few are affected before changing settings."
+  - question: "How do I refresh an IPTV EPG?"
+    answer: "Open your player's playlist or EPG settings and use its update or refresh command. Menu names vary. Confirm the EPG source is enabled and wait for the download to finish. If it fails, verify the source URL with your authorized provider before clearing any saved configuration."
+  - question: "Why does my IPTV EPG show the wrong time?"
+    answer: "Wrong guide times usually point to an incorrect device time zone, daylight-saving setting or EPG time offset. Set the device clock and time zone to automatic, restart the app, then use a manual offset only if every channel is consistently early or late by the same amount."
+  - question: "Why does the guide say no information for only some channels?"
+    answer: "When most channels have listings but a few do not, channel-to-guide mapping is the likely issue. The playlist channel identifier must match an entry in the EPG data. Remap the affected channel or ask the provider to correct its channel IDs."
+  - question: "Will clearing the IPTV app cache delete my playlist?"
+    answer: "Clearing cache normally removes temporary files, while clearing app data or storage may erase playlists, favourites and settings. Export or record your authorized playlist and EPG details first, and use clear data only after less disruptive fixes fail."
+related:
+  - label: "Fix IPTV Buffering on Firestick"
+    href: "/blog/fix-iptv-buffering-on-firestick"
+  - label: "Install IPTV on Firestick"
+    href: "/blog/how-to-install-iptv-on-firestick"
+  - label: "Internet Speed for IPTV"
+    href: "/blog/internet-speed-for-iptv"
+  - label: "EasyIPTV Installation Guide"
+    href: "/installation-guide"
+  - label: "Google TV Troubleshooting"
+    href: "https://support.google.com/googletv/answer/12364830?hl=en"
+  - label: "Samsung TV App Troubleshooting"
+    href: "https://www.samsung.com/ph/support/tv-audio-video/how-to-troubleshoot-apps-that-are-not-working-on-the-samsung-smart-tv/"
+  - label: "Amazon Fire TV App Management"
+    href: "https://developer.amazon.com/docs/fire-tv/installing-and-running-your-app.html"
+---
+
+**IPTV EPG not working?** First determine whether the guide is blank for every channel, missing only a few channels, or showing programmes at the wrong time. A completely blank guide usually points to the EPG source or download. A few missing rows suggest channel mapping. A consistent one-hour or several-hour shift usually means the time zone or offset is wrong. Follow the matching test below before deleting the app.
+
+![A television guide showing IPTV EPG not working while a viewer checks the programme grid](https://images.pexels.com/photos/4009407/pexels-photo-4009407.jpeg?auto=compress&cs=tinysrgb&w=1200)
+
+*Last reviewed July 17, 2026. Menu names vary by player and device. Back up playlists, favourites and authorized provider details before clearing app data. Use only services and content you are authorized to access.*
+
+## Table of contents
+
+- [Diagnose the symptom](#diagnose-the-symptom)
+- [Nine proven fixes](#nine-proven-fixes)
+- [Device-specific steps](#device-specific-steps)
+- [Channel mapping](#channel-mapping)
+- [When to contact the provider](#when-to-contact-the-provider)
+- [Prevention checklist](#prevention-checklist)
+
+<a id="diagnose-the-symptom"></a>
+## IPTV EPG Not Working: Diagnose It in 60 Seconds
+
+Open the live channel itself, then open the guide. Use this table to choose the first test.
+
+| Symptom | Most likely cause | Start here |
+|---|---|---|
+| Every guide row is blank | EPG source failed, expired or was disabled | Refresh source and verify URL/account |
+| Only some channels say “No information” | Channel IDs do not match EPG entries | Check or remap channel assignment |
+| All listings are early or late by the same amount | Time zone, daylight saving or offset | Set device time automatically; reset offset |
+| Guide works after restart, then disappears | Cache, storage or background restriction | Free storage, update app, restart device |
+| Live TV and guide both fail | Playlist/account/network/provider issue | Test internet and provider status first |
+| Guide loads on one device only | Local app configuration | Compare source, app version, clock and storage |
+
+This distinction prevents the common mistake of changing the router when the guide file is missing, or changing the EPG URL when only the clock is wrong.
+
+<a id="nine-proven-fixes"></a>
+## Nine Proven Fixes for IPTV EPG Not Working
+
+### 1. Confirm live channels still play
+
+Try three authorized channels from different groups. If none plays, the problem is broader than the EPG. Check the internet connection, playlist credentials, subscription status and provider service.
+
+If channels play instantly but the grid is blank, the video stream and guide data have separated. Continue with EPG-specific checks instead of spending time on bandwidth. Our [internet speed for IPTV guide](/blog/internet-speed-for-iptv) helps when video also stalls.
+
+### 2. Use the player's EPG refresh command
+
+Most IPTV players have an option named **Update EPG**, **Refresh TV guide**, **Update playlist**, or **Sync data**. It may sit under Settings, Playlists, EPG sources or TV Guide.
+
+Start one manual refresh and watch its status. A successful refresh should show a completion time or downloaded programme count. Repeatedly pressing refresh can create overlapping requests, so wait for the current operation to finish.
+
+After completion, close and reopen the guide. If the player offers “update on app start,” enable it only after a manual update succeeds.
+
+### 3. Verify the EPG source and credentials
+
+Players commonly receive guide data through provider-managed login details or an XMLTV URL. One missing character, expired token or changed password can make the guide blank while an old playlist still plays.
+
+Compare the source with the details supplied through your provider's official channel. Check:
+
+- `https://` versus `http://`;
+- username and password capitalization;
+- extra spaces copied before or after the URL;
+- an expired access token;
+- whether the source is assigned to the correct playlist; and
+- whether the account is active.
+
+Do not paste a private playlist or EPG URL into public “checker” websites. These URLs may contain credentials.
+
+### 4. Set date, time and time zone to automatic
+
+If every listing is shifted by exactly one, two or several hours, the guide likely downloaded correctly. The app is interpreting times against the wrong device clock or offset.
+
+On the streaming device or television:
+
+1. turn on automatic date and time;
+2. select the correct local time zone;
+3. confirm the displayed clock;
+4. restart the device; and
+5. refresh the guide again.
+
+Remove any manual EPG offset before testing. Add an offset only if the device time is correct and every channel remains shifted by the same amount. If only one channel is wrong, do not change the global offset; its source data probably needs correction.
+
+### 5. Check channel-to-EPG mapping
+
+An XMLTV guide identifies channels using IDs. The playlist also identifies each channel. When those values do not match, the player can stream the channel but cannot attach listings.
+
+This is the leading clue when most of the guide works and only renamed, regional or recently added channels show no information. Open the player's **Assign EPG**, **Channel mapping**, or **EPG ID** screen and search for the matching station.
+
+Map one channel, refresh and verify it before changing dozens. If the correct station is absent from the EPG source, only the provider or guide-data supplier can add it.
+
+### 6. Clear cache, not app data, first
+
+Stale temporary files can prevent a fresh guide database from replacing an old one. On Fire TV and Android/Google TV, open the device's application settings, select the IPTV player and choose **Clear cache**.
+
+Do not choose **Clear data**, **Clear storage** or **Uninstall** yet. Those actions may erase logins, playlists, favourites, recordings and mappings. Record or export your configuration first.
+
+Google's official TV troubleshooting also recommends restarting the device, force-stopping background apps and checking for updates when an app is slow or unstable.
+
+### 7. Free storage and restart the device
+
+Guide databases can contain listings for thousands of channels and several days. A low-storage device may download the file but fail while extracting or indexing it.
+
+Remove unused apps and downloads, then perform a full restart—not sleep mode. Google TV exposes **Settings > System > Restart**. Samsung recommends a soft reset by holding the remote's power button until the TV turns off and on, or unplugging it briefly.
+
+After restart, open only the IPTV player and run one guide refresh. If it now works, storage or memory pressure was likely involved.
+
+### 8. Update the player and device software
+
+An older player may fail after a provider changes EPG compression, certificates or data format. Update the app through its legitimate store or publisher. Update the Fire TV, Android/Google TV or television software as well.
+
+Avoid downloading a random modified APK to fix a guide. It may expose playlist credentials or contain malware. Our [Firestick installation guide](/blog/how-to-install-iptv-on-firestick) explains safer source checks.
+
+After updating, restart and refresh. If the problem began immediately after an update, check the official developer support channel for a known issue rather than repeatedly reinstalling.
+
+### 9. Remove and re-add only the EPG source
+
+If all earlier checks fail, back up the configuration and remove the EPG source—not the entire playlist or app. Add the source again using verified details, assign it to the playlist and allow the first download to finish.
+
+Reinstall the whole player only as a final local test. First confirm you can restore authorized login information, favourites and mappings. If the same source fails on two different devices, reinstalling a third device is unlikely to help; contact the provider.
+
+![A viewer refreshing an IPTV guide after correcting the EPG source and device time zone](https://images.pexels.com/photos/4777979/pexels-photo-4777979.jpeg?auto=compress&cs=tinysrgb&w=1200)
+
+<a id="device-specific-steps"></a>
+## Device-Specific EPG Troubleshooting
+
+### Fire TV and Firestick
+
+Typical path: **Settings > Applications > Manage Installed Applications > [player]**. You can force stop, clear cache and launch the app. Amazon's developer documentation confirms that app data can also be cleared from the system application settings.
+
+Use this order:
+
+1. force stop the player;
+2. clear cache;
+3. restart Fire TV;
+4. confirm automatic time zone;
+5. open the player and update EPG.
+
+If video buffers as well, follow our [Firestick buffering fixes](/blog/fix-iptv-buffering-on-firestick).
+
+### Android TV and Google TV
+
+Typical path: **Settings > Apps > See all apps > [player]**. Force stop and clear cache, then use **Settings > System > Restart**. Update all apps through Google Play and check the device system update.
+
+Background apps and very low storage can disrupt a large EPG import. Close unused apps and leave enough space for the guide database.
+
+### Samsung Smart TV
+
+First perform a soft reset and check **Settings > Support > Software Update**. App menus differ by model and region. If the IPTV player provides its own EPG refresh, use it before resetting Smart Hub.
+
+A Smart Hub reset is disruptive because it may sign you out of apps and require downloads again. Samsung lists it as a later troubleshooting method, so record settings and use simpler checks first.
+
+### Apple TV, iPhone and iPad
+
+Confirm **Settings > General > Date & Time > Set Automatically**, then force close and reopen the player. Update the app and operating system. iOS and tvOS do not expose a general per-app cache button, so use the player's own EPG reset before reinstalling.
+
+<a id="channel-mapping"></a>
+## How to Fix Missing EPG on Only Some Channels
+
+Do not apply a global time offset or clear the whole database when 95% of channels work. Select one affected channel and compare:
+
+- channel name;
+- country or region;
+- HD, FHD or 4K variant;
+- call sign;
+- playlist `tvg-id`; and
+- available guide assignment.
+
+A channel labelled “News HD CA” may need the guide entry for the station's call sign rather than its display name. A player can often assign the guide entry manually even when labels differ.
+
+After mapping, check both the current and next programme. A match based only on a similar name can attach the wrong regional schedule.
+
+## How to Fix an EPG That Is One Hour Off
+
+Use this sequence:
+
+1. verify the device clock against your phone;
+2. enable automatic date, time and time zone;
+3. remove the player's manual offset;
+4. restart and refresh;
+5. check whether all channels have the same shift; and
+6. add a temporary offset only when the shift is universal.
+
+A one-hour error around daylight-saving changes may come from stale guide data or a device time-zone database. Updating the system and re-downloading the guide is safer than leaving a permanent manual offset that becomes wrong at the next clock change.
+
+<a id="when-to-contact-the-provider"></a>
+## When the Provider Must Fix It
+
+Contact the authorized provider when:
+
+- the same EPG source fails on multiple devices and networks;
+- login details are rejected despite careful re-entry;
+- the download returns zero channels;
+- a group of newly added channels has no guide entries;
+- only one station has consistently wrong listings; or
+- the source URL returns an access or server error.
+
+Send useful evidence without exposing credentials:
+
+- device and model;
+- player name and version;
+- date, time and time zone;
+- whether live video works;
+- whether all or some guide rows fail;
+- exact error text; and
+- a screenshot with username, password and URL tokens hidden.
+
+“The guide is broken” creates a long support exchange. “Live channels work; EPG refresh returns zero programmes on Fire TV and Android TV since 19:10 Eastern” is actionable.
+
+## What Not to Do
+
+- Do not publish private EPG or playlist URLs in forums.
+- Do not clear app data before saving playlists and mappings.
+- Do not install unknown “premium unlocked” players.
+- Do not change the global time offset for one wrong channel.
+- Do not refresh continuously while a download is running.
+- Do not assume fast internet fixes missing programme metadata.
+
+The [EasyIPTV installation guide](/installation-guide) covers supported setup steps if the playlist itself also needs to be re-added.
+
+<a id="prevention-checklist"></a>
+## Keep the IPTV Guide Working
+
+Once fixed, use this maintenance checklist:
+
+- enable one scheduled EPG update per day;
+- keep automatic device time enabled;
+- maintain free device storage;
+- update the player from a trusted source;
+- save authorized account details securely;
+- export favourites or mappings when supported; and
+- note which guide source belongs to each playlist.
+
+Avoid importing multiple overlapping EPG sources unless you need them. Larger guide databases take longer to download and are harder to map correctly.
+
+## Bottom Line
+
+When your **IPTV EPG is not working**, the symptom tells you where to look. A blank guide points to the source or download, missing individual rows point to mapping, and a uniform time shift points to the clock or offset.
+
+Refresh once, verify the source, correct the device time, test channel mapping, clear cache and update the device in that order. Back up settings before any reset. If the same verified source fails across devices, send precise evidence to the authorized provider instead of repeatedly reinstalling the player.
