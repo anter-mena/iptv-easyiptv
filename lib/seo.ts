@@ -23,7 +23,7 @@ export function buildMetadata({
     alternates: {
       canonical: url,
     },
-    openGraph: {
+    openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "EasyIPTV — Live TV, sports and on-demand streaming in Canada." }],
       title,
       description,
       url,
@@ -31,7 +31,7 @@ export function buildMetadata({
       locale: "en_CA",
       type: "website",
     },
-    twitter: {
+    twitter: { images: ["/opengraph-image.png"],
       card: "summary_large_image",
       title,
       description,

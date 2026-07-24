@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/general-disclaimer",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "General Legal Disclaimer & Content Guidelines | Easy IPTV",
     description: "Read our General Disclaimer regarding the use of Easy IPTV services, content availability, and limitations of liability for our streaming platform.",
     url: "/general-disclaimer",

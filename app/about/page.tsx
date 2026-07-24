@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/about",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "About Easy IPTV - The Best Premium Streaming Service Provider",
     description: "Learn about the mission, values, and journey of Easy IPTV. We are revolutionizing the streaming industry with cutting-edge technology and 24/7 support.",
     url: "/about",

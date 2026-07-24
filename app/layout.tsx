@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   keywords: ["IPTV", "streaming", "live tv", "easy iptv", "premium streaming"],
   authors: [{ name: "Easy IPTV Team" }],
   creator: "Easy IPTV Team",
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     type: "website",
     locale: "en_US",
     url: "/", 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/faq",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "Frequently Asked Questions (FAQ) | Easy IPTV Support",
     description: "Have questions about Easy IPTV? Read our comprehensive FAQ for answers regarding installation, billing, subscriptions, and supported devices.",
     url: "/faq",

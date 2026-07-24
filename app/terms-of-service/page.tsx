@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/terms-of-service",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "Terms of Service & User Agreements | Easy IPTV Canada",
     description: "Review the Easy IPTV Terms of Service. Discover the rules, usage guidelines, and legal agreements for accessing our premium live TV streaming platform.",
     url: "/terms-of-service",

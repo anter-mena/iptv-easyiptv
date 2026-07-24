@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/privacy-policy",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "Privacy Policy - Data Protection & GDPR | Easy IPTV",
     description: "Read the Easy IPTV Privacy Policy to understand how we securely collect, use, and protect your personal data in compliance with GDPR and CCPA regulations.",
     url: "/privacy-policy",

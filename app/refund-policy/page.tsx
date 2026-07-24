@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/refund-policy",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "Refund & Money-Back Policy | Easy IPTV Subscription Guarantees",
     description: "Read our detailed Refund Policy to understand the conditions under which refunds are issued for Easy IPTV streaming services and subscriptions.",
     url: "/refund-policy",
