@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Cookie } from "lucide-react";
 
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,7 +14,7 @@ const CookieBanner = () => {
     }
   }, []);
 
-  const handleAcceptAll = () => {
+  const handleAccept = () => {
     setCookie("analytics_consent", "true", 365);
     setCookie("marketing_consent", "true", 365);
     setCookie("functional_consent", "true", 365);
@@ -48,37 +48,41 @@ const CookieBanner = () => {
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-[10000] border-t border-gray-700 bg-[#333333] p-4 shadow-lg sm:p-5"
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-[10000] p-4 lg:p-6"
       role="region"
       aria-label="Cookie consent"
     >
-      <div className="mx-auto flex max-w-7xl flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="flex-1 text-xs leading-relaxed text-gray-300 sm:text-sm">
-          We use cookies to improve your experience and analyse site traffic.{" "}
-          <Link
+      <div className="pointer-events-auto mx-auto flex max-w-3xl flex-col gap-4 rounded-2xl border border-border bg-card p-5 shadow-xl sm:flex-row sm:items-center lg:p-6">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-iptv-green/10">
+          <Cookie size={19} className="text-iptv-green" strokeWidth={1.75} />
+        </div>
+
+        <p className="flex-1 text-[0.825rem] leading-relaxed text-muted-foreground">
+          We use cookies to improve your experience and analyse site traffic. By
+          continuing, you agree to our{" "}
+          <a
             href="/privacy-policy"
-            className="font-semibold text-iptv-green underline underline-offset-4 transition-colors hover:text-white"
-            title="Read our Privacy Policy"
+            className="font-semibold text-foreground underline decoration-foreground/25 underline-offset-4 transition-all hover:decoration-foreground"
           >
-            Learn more
-            <span className="sr-only"> about our Privacy Policy</span>
-          </Link>
+            Privacy Policy
+          </a>
+          .
         </p>
 
-        <div className="flex w-full shrink-0 items-center justify-end gap-3 sm:w-auto">
+        <div className="flex shrink-0 items-center gap-3">
           <button
             type="button"
             onClick={handleDecline}
-            className="flex min-h-11 items-center justify-center rounded-md border border-gray-600 px-4 text-sm font-medium text-gray-200 transition-colors hover:bg-[#444444] focus:outline-none focus:ring-1 focus:ring-iptv-green/20"
+            className="px-2 text-[13px] font-semibold text-muted-foreground transition-colors hover:text-foreground"
           >
             Decline
           </button>
           <button
             type="button"
-            onClick={handleAcceptAll}
-            className="flex min-h-11 items-center justify-center rounded-md bg-iptv-green px-6 text-sm font-semibold text-white ring-4 ring-iptv-green/20 transition-colors hover:bg-iptv-green-dark focus:outline-none"
+            onClick={handleAccept}
+            className="h-10 rounded-2xl bg-iptv-green px-5 text-[13px] font-bold text-white shadow-sm transition-all hover:bg-iptv-green-dark hover:shadow-md"
           >
-            Accept All
+            Accept
           </button>
         </div>
       </div>
