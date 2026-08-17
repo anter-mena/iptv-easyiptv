@@ -1,0 +1,185 @@
+---
+title: "IPTV No Sound? 7 Real Fixes in the Right Order"
+description: "IPTV no sound with picture playing is almost always an audio codec or passthrough problem. Seven fixes in diagnostic order, starting with the one-minute test."
+date: "2026-08-17"
+updated: "2026-08-17"
+category: "Troubleshooting"
+focusKeyword: "iptv no sound"
+image: "https://images.pexels.com/photos/6468586/pexels-photo-6468586.jpeg?auto=compress&cs=tinysrgb&w=1200"
+keywords:
+  - "iptv no sound"
+  - "iptv audio not working"
+  - "ac3 audio codec iptv"
+  - "hdmi arc no sound"
+  - "iptv smarters audio decoder"
+faqs:
+  - question: "Why does my IPTV have picture but no sound?"
+    answer: "Most often because the stream's audio codec is one your device cannot decode. Many live channels use Dolby Digital, also called AC-3 or E-AC-3, and some players and cheaper streaming boxes cannot decode it. Video plays normally while audio produces silence."
+  - question: "How do I know if it's the stream or my device?"
+    answer: "Play a different channel, then play something outside the app entirely such as YouTube. If other channels have sound, it is that stream's audio track. If nothing anywhere has sound, it is your device or your audio output path."
+  - question: "What is the passthrough setting and should I turn it off?"
+    answer: "Passthrough, sometimes labelled bitstream, sends the raw audio to your TV or soundbar to decode. If that equipment cannot handle the format you get silence. Setting the output to PCM instead makes the streaming device do the decoding, which fixes most cases."
+  - question: "Why did sound stop working after I connected a soundbar?"
+    answer: "Usually an HDMI ARC or eARC configuration issue. The TV needs its audio output set to ARC, the soundbar must be connected to the HDMI port labelled ARC or eARC, and HDMI-CEC has to be enabled on both. Any one of those missing produces silence."
+  - question: "Can changing the audio decoder in the player fix it?"
+    answer: "Frequently, yes. Players such as IPTV Smarters Pro let you switch between a hardware and software decoder. Switching from hardware to software makes the app decode the audio itself, which resolves most Dolby Digital problems on devices that cannot handle it natively."
+related:
+  - label: "IPTV Audio Out of Sync"
+    href: "/blog/iptv-audio-out-of-sync"
+  - label: "IPTV Subtitles and Audio Tracks Canada"
+    href: "/blog/iptv-subtitles-audio-tracks-canada"
+  - label: "IPTV Smarters Pro Not Working"
+    href: "/blog/iptv-smarters-pro-not-working"
+  - label: "Installation Guide"
+    href: "/installation-guide"
+  - label: "FAQ"
+    href: "/faq"
+  - label: "Dolby — About Dolby Digital Plus"
+    href: "https://professional.dolby.com/consumer-electronics/all-technologies/dolby-digital-plus/"
+  - label: "Amazon — Fire TV audio settings"
+    href: "https://www.amazon.ca/gp/help/customer/display.html?nodeId=GHTXHPHLCM7QZ8HG"
+  - label: "Google — Android TV sound settings help"
+    href: "https://support.google.com/androidtv/answer/10021724"
+---
+
+**IPTV no sound** with the picture playing perfectly is one of the most misdiagnosed problems in streaming, because the instinct is to blame the connection — and the connection is almost never the cause. If video is arriving smoothly, your bandwidth is fine. What has failed is the audio path, and there are only a handful of places it can break.
+
+![IPTV no sound — adjusting player and audio settings on a streaming device](https://images.pexels.com/photos/6468586/pexels-photo-6468586.jpeg?auto=compress&cs=tinysrgb&w=1200)
+
+## Quick Answer
+
+Picture but no audio is nearly always a **codec or passthrough** problem, not a network one. Most live channels carry **Dolby Digital (AC-3 or E-AC-3)** audio, and many players and budget streaming boxes cannot decode it. The two fixes that resolve the majority of cases: **switch the player's decoder from hardware to software**, and **set the device's digital audio output to PCM** instead of passthrough.
+
+## The One-Minute Test That Saves an Hour
+
+Before changing any setting, find out where the IPTV no sound fault actually sits. This takes sixty seconds and determines which of the seven fixes below you actually need.
+
+| Test | Result | What it means |
+|---|---|---|
+| Play a different channel | Sound works | That **stream's audio track** |
+| Play several channels | All silent | **Device or output path** |
+| Play YouTube or Netflix | Sound works | **The IPTV app**, not the device |
+| Play anything at all | All silent | **TV, soundbar or HDMI path** |
+
+Most people skip this and spend an hour adjusting settings that were never the problem. The test tells you whether to work on the app, the device or the audio equipment.
+
+## IPTV No Sound: Fix 1 — Switch the Player's Audio Decoder
+
+This resolves more cases of IPTV no sound than everything else combined, and it is a single toggle.
+
+Players including IPTV Smarters Pro, TiviMate and similar apps let you choose between a **hardware decoder** and a **software decoder**. Hardware decoding hands the audio to the device's chip, which is efficient but only works if the chip supports the format. Software decoding makes the app do the work itself.
+
+Because a great many live channels use Dolby Digital and a great many inexpensive Android boxes and Fire TV devices lack an AC-3 licence, hardware decoding silently fails on exactly those streams.
+
+Look for **Settings → Player → Decoder** and change hardware to software. If your player offers a specific option such as "software (audio only)," that is ideal — it keeps video hardware-accelerated while fixing the sound.
+
+## Fix 2 — Set Digital Audio Output to PCM
+
+Your streaming device has an audio output format setting, usually labelled **Auto**, **Passthrough**, **Bitstream** or **PCM**.
+
+Passthrough and bitstream send the raw, undecoded audio down the HDMI cable and expect your TV or soundbar to decode it. If that equipment cannot handle the format, you get silence — not an error message.
+
+**PCM** tells the device to decode the audio itself and send standard uncompressed stereo. It is the most compatible setting in existence and it fixes the problem immediately.
+
+Where to look:
+- **Fire TV** — Settings → Display & Sound → Audio → Dolby Digital Output → off, or Surround Sound → PCM
+- **Android TV / Google TV** — Settings → Display & Sound → Advanced sound → Select formats → **None** or Manual
+- **Apple TV** — Settings → Video and Audio → Audio Format → **Change Format → Off** (which forces PCM)
+
+The trade-off is real but small: you lose surround sound and get stereo. For live TV that is rarely a meaningful loss, and you can revert once sound is working to test whether your equipment handles it.
+
+![Checking the audio track selector, a common IPTV no sound cause on multi-language channels](https://images.pexels.com/photos/4777979/pexels-photo-4777979.jpeg?auto=compress&cs=tinysrgb&w=1200)
+
+## Fix 3 — Check the Audio Track
+
+Many live channels carry multiple audio tracks — English, French, an original-language feed, sometimes described video. If the player defaults to a track encoded in a format your device cannot handle, or to a track that is genuinely empty, you get silence while another track would play fine.
+
+During playback, open the player's audio menu and cycle through every available track. This is a thirty-second check and it is the fix whenever *some* channels work and others do not.
+
+Our guide on [subtitles and audio tracks](/blog/iptv-subtitles-audio-tracks-canada) covers track selection in more depth.
+
+## Fix 4 — Sort Out HDMI ARC or eARC
+
+If sound stopped when a soundbar or receiver entered the picture, this is your culprit. Three things must all be true:
+
+1. The soundbar is connected to the TV port explicitly labelled **HDMI ARC** or **eARC** — not any other HDMI port.
+2. The TV's audio output is set to **ARC**, **HDMI** or **external speakers**, not to its internal speakers.
+3. **HDMI-CEC** is enabled on both the TV and the soundbar. Manufacturers rename it constantly — Anynet+ on Samsung, SimpLink on LG, Bravia Sync on Sony, VIERA Link on Panasonic.
+
+A useful shortcut: connect the streaming device **directly to the TV** and use the TV's own speakers. If sound returns, the fault is in the soundbar path, not the stream.
+
+## Fix 5 — Rule Out the Obvious Two
+
+Worth stating because they account for a real share of cases:
+
+- **The player has its own volume control**, independent of the TV and the remote. It can be muted while everything else looks normal.
+- **A Bluetooth speaker or headphones** paired previously may still be selected as the output. The device is dutifully sending audio somewhere you cannot hear it.
+
+## Fix 6 — Restart in the Right Order
+
+Order matters here, because HDMI handshakes are negotiated at power-on.
+
+1. Power off the TV, the soundbar and the streaming device.
+2. Unplug all three from mains power for **thirty seconds**.
+3. Power on the **TV first**, then the **soundbar**, then the **streaming device**.
+
+This forces a fresh HDMI and CEC negotiation. It resolves cases where sound worked yesterday, nothing changed, and it stopped today.
+
+## Fix 7 — Confirm It Isn't the Stream
+
+Some channels genuinely go out with a broken or missing audio track, and no setting on your equipment will fix that. The signature is specific: **one channel silent, everything else fine, across more than one device.**
+
+If you can reproduce that on a phone as well as the TV, it is upstream. Report the specific channel through [contact](/contact) — provider-side audio faults get fixed quickly once they are known about, and they cannot be fixed if nobody reports them.
+
+![Testing playback across devices to isolate an IPTV no sound fault](https://images.pexels.com/photos/5202915/pexels-photo-5202915.jpeg?auto=compress&cs=tinysrgb&w=1200)
+
+## IPTV No Sound on One Device But Not Another
+
+This pattern deserves its own section because it is the most informative version of the fault, and it points almost immediately to a cause.
+
+If a channel plays with sound on your **phone** but is silent on the **TV box**, the stream is fine. Phones decode Dolby Digital in software as a matter of course; budget streaming boxes frequently cannot. That single comparison isolates the problem to device-side decoding — which means Fix 1 and Fix 2 will resolve it.
+
+Three variants and what each tells you:
+
+| Works on | Silent on | Almost certainly |
+|---|---|---|
+| Phone | TV box | **Device codec support** — switch decoder to software |
+| TV speakers | Soundbar | **ARC / eARC / CEC path** |
+| Other apps | The IPTV player only | **Player audio setting**, not the device |
+| Nothing anywhere | — | TV, receiver or HDMI hardware |
+
+The reason this works as a diagnostic is that each device makes its own decoding decision on the same incoming stream. Same stream, different result, tells you the stream is not the variable.
+
+One caveat worth knowing: a phone connected to **Bluetooth headphones** may be decoding and re-encoding audio in a way that masks the original problem. For a clean test, use the phone's own speaker.
+
+## The Diagnostic Order, Summarised
+
+| Step | Action | Fixes |
+|---|---|---|
+| 1 | One-minute test | Tells you where to look |
+| 2 | Decoder: hardware → software | Most Dolby Digital cases |
+| 3 | Digital output → PCM | Most passthrough cases |
+| 4 | Cycle audio tracks | Channel-specific silence |
+| 5 | ARC / eARC / CEC check | Soundbar cases |
+| 6 | Player volume, Bluetooth output | The overlooked ones |
+| 7 | Power-cycle in order | Handshake faults |
+
+Work down that list rather than across it. Nearly everyone who reports persistent IPTV no sound has changed six settings at once and no longer knows which one mattered — change one thing, test, then move on.
+
+## Why IPTV No Sound Is Never a Speed Problem
+
+It is worth being clear about the underlying mechanism, because it explains why upgrading your internet will not help.
+
+A stream carries video and audio as separate elementary streams inside one container. They travel together and are separated by the player. If bandwidth were the issue you would see the **video** degrade first — buffering, resolution drops, stalling — because video is by far the larger of the two. Audio is a tiny fraction of the bitrate.
+
+So picture-perfect video with no sound is close to proof that delivery is fine and decoding is not. That is good news: decoding is a settings problem, and settings are free to change.
+
+If you are also seeing stutter or lag, that is a different fault with a different fix — start with [audio out of sync](/blog/iptv-audio-out-of-sync) or the [installation guide](/installation-guide) instead.
+
+## The Bottom Line
+
+Picture without sound is a codec conversation, not a connection one. Switch the player's decoder to software, set the digital output to PCM, and check the audio track — those three cover the overwhelming majority of cases, and all three are free and reversible.
+
+If it persists on one channel across two devices, it is not you. Report the channel and it will get fixed.
+
+*This article is general information. Menu names and settings paths vary by device, app version and manufacturer — check your own equipment's documentation if a setting is not where described.*
