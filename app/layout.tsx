@@ -12,7 +12,6 @@ const inter = Inter({
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ChatBot } from "@/components/chatbot";
-import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://easyiptv.ca"),
@@ -94,7 +93,6 @@ export default function RootLayout({
           <SiteFooter />
         </div>
         <ChatBot />
-        <CookieBanner />
       </body>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-931ZQHP0C9" strategy="afterInteractive" />
       <Script id="google-analytics" strategy="afterInteractive">
