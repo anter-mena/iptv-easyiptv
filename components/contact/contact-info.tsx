@@ -12,7 +12,7 @@ const contactItems = [
   {
     icon: Phone,
     title: "Phone Support",
-    desc: "+1 (672) 896-2606",
+    desc: "+212 787-736166",
     tag: "02 / Direct",
     sub: "Available 24/7",
   },

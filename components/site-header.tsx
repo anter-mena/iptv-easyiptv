@@ -207,7 +207,7 @@ export function SiteHeader() {
 
           <div className="flex w-32 items-center justify-end gap-4 md:w-40">
             <Link
-              href="https://wa.me/16728962606?text=Hello!%20I%20am%20interested%20in%20starting%20a%20*Free%20Trial*%20for%20*Easy%20IPTV*."
+              href="https://wa.me/212787736166?text=Hello!%20I%20am%20interested%20in%20starting%20a%20*Free%20Trial*%20for%20*Easy%20IPTV*."
               target="_blank"
               rel="noopener noreferrer"
               className="hidden rounded-md bg-iptv-green px-4 py-2 text-sm font-medium text-white ring-2 ring-iptv-green/20 transition-all hover:bg-iptv-green-dark hover:scale-105 active:scale-95 lg:inline-flex"
@@ -330,7 +330,7 @@ export function SiteHeader() {
 
             <div className="pt-4 border-t border-gray-100">
               <Link
-                href="https://wa.me/16728962606?text=Hello!%20I%20am%20interested%20in%20starting%20a%20*Free%20Trial*%20for%20*Easy%20IPTV*."
+                href="https://wa.me/212787736166?text=Hello!%20I%20am%20interested%20in%20starting%20a%20*Free%20Trial*%20for%20*Easy%20IPTV*."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full rounded-md bg-iptv-green px-6 py-3 text-center text-sm font-medium text-white ring-2 ring-iptv-green/20 transition-all hover:bg-iptv-green-dark hover:scale-[1.02] active:scale-95"

@@ -21,7 +21,7 @@ const methods = [
     description: "Speak directly with our technical experts for complex troubleshooting.",
     icon: Phone,
     action: "Call Now",
-    href: "tel:+16728962606",
+    href: "tel:+212787736166",
   },
   {
     title: "Support Ticket",

@@ -44,7 +44,7 @@ export function ChatBot() {
         
         <div className="flex flex-col gap-2">
           <a
-            href="https://wa.me/16728962606"
+            href="https://wa.me/212787736166"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-between w-full rounded-xl border border-border/40 bg-background/50 p-2.5 transition-all duration-300 hover:scale-[1.02] hover:bg-background hover:shadow-lg hover:shadow-[#25D366]/10 hover:border-[#25D366]/30 overflow-hidden"
@@ -65,7 +65,7 @@ export function ChatBot() {
           </a>
 
           <a
-            href="https://t.me/+16728962606"
+            href="https://t.me/+212787736166"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-between w-full rounded-xl border border-border/40 bg-background/50 p-2.5 transition-all duration-300 hover:scale-[1.02] hover:bg-background hover:shadow-lg hover:shadow-[#229ED9]/10 hover:border-[#229ED9]/30 overflow-hidden"
