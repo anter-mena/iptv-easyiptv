@@ -1,13 +1,13 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
+
+import { BASE_URL } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://easyiptv.ca'
-
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
-  }
+    sitemap: `${BASE_URL}/sitemap.xml`,
+  };
 }

@@ -1,0 +1,183 @@
+import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
+import { ArrowUpRight } from "lucide-react";
+
+import { Breadcrumbs } from "@/components/blog/breadcrumbs";
+import { PostImage } from "@/components/blog/post-image";
+import { TableOfContents } from "@/components/blog/table-of-contents";
+import { CTA } from "@/components/home/home-cta";
+import { JsonLd } from "@/components/seo/json-ld";
+import { formatDate, type ArticleSection, type Post } from "@/lib/content";
+import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { extractToc } from "@/lib/toc";
+
+/** Full article page, shared by blog posts and news items. */
+export function Article({ post, section }: { post: Post; section: ArticleSection }) {
+  const { meta, content } = post;
+  const path = `${section.path}/${meta.slug}`;
+  const toc = extractToc(content);
+  const internal = meta.related.filter((link) => !link.href.startsWith("http"));
+  const sources = meta.related.filter((link) => link.href.startsWith("http"));
+  const faq = faqJsonLd(meta.faqs);
+
+  const byline =
+    section.dateLine === "published"
+      ? `By the ${meta.author} · Published ${formatDate(meta.date)}${
+          meta.updated !== meta.date ? ` · Updated ${formatDate(meta.updated)}` : ""
+        } · ${meta.readingTime} min read`
+      : `By the ${meta.author} · Updated ${formatDate(meta.updated)} · ${meta.readingTime} min read`;
+
+  return (
+    <main className="flex-1 bg-white">
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: section.label, path: section.path },
+            { name: meta.title, path },
+          ]),
+          articleJsonLd(meta, section),
+          ...(faq ? [faq] : []),
+        ]}
+      />
+
+      {/* Article header */}
+      <section className="border-b border-gray-100 bg-gray-50 pt-16 pb-12 lg:pt-20 lg:pb-16">
+        <div className="mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: section.label, href: section.path },
+              { label: meta.title },
+            ]}
+          />
+          <span className="mb-4 text-[10px] font-bold uppercase tracking-[0.22em] text-iptv-green">
+            {meta.category}
+          </span>
+          <h1 className="mb-5 text-3xl font-black uppercase leading-tight tracking-tight text-gray-900 md:text-4xl">
+            {meta.title}
+          </h1>
+          <p className="mb-5 max-w-xl text-sm leading-relaxed text-gray-500 md:text-base">
+            {meta.description}
+          </p>
+          <p className="text-xs text-gray-400">{byline}</p>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="bg-white py-16 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:grid lg:grid-cols-[minmax(0,1fr)_14rem] lg:items-start lg:gap-12 lg:px-8">
+          <article className="mx-auto w-full min-w-0 max-w-[760px] lg:mx-0">
+            <TableOfContents items={toc} variant="mobile" />
+            <div className="blog-prose prose prose-lg max-w-none">
+              {/* rehype-raw lets posts embed HTML (figures, video, iframes);
+                  rehype-slug gives headings the ids the table of contents uses. */}
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw, rehypeSlug]}
+                components={{ img: PostImage }}
+              >
+                {content}
+              </ReactMarkdown>
+            </div>
+
+            {/* Related reading + sources */}
+            {(internal.length > 0 || sources.length > 0) && (
+              <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                {internal.length > 0 && (
+                  <div>
+                    <h2 className="mb-4 text-base font-bold uppercase tracking-tight text-gray-900">
+                      Related Reading
+                    </h2>
+                    <ul className="flex flex-col gap-2.5">
+                      {internal.map((link) => (
+                        <li key={link.href}>
+                          <Link
+                            href={link.href}
+                            className="inline-flex items-center gap-1.5 text-sm font-semibold text-iptv-green underline-offset-2 hover:underline"
+                          >
+                            {link.label}
+                            <ArrowUpRight className="h-3.5 w-3.5" />
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {sources.length > 0 && (
+                  <div>
+                    <h2 className="mb-4 text-base font-bold uppercase tracking-tight text-gray-900">
+                      Sources
+                    </h2>
+                    <ul className="flex flex-col gap-2.5">
+                      {sources.map((link) => (
+                        <li key={link.href}>
+                          <a
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-sm text-gray-500 underline decoration-gray-300 underline-offset-2 hover:text-iptv-green"
+                          >
+                            {link.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Back to the listing */}
+            <div className="mt-14 flex flex-col items-center justify-center gap-3 text-center sm:flex-row sm:gap-6">
+              <Link
+                href={section.path}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4 transition-all hover:text-iptv-green hover:decoration-iptv-green"
+              >
+                <ArrowUpRight className="h-3.5 w-3.5 rotate-180" />
+                {section.backLabel}
+              </Link>
+              <Link
+                href={section.next.href}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4 transition-all hover:text-iptv-green hover:decoration-iptv-green"
+              >
+                {section.next.label}
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </article>
+
+          <aside className="hidden lg:block sticky top-28 self-start">
+            <TableOfContents items={toc} variant="sidebar" />
+          </aside>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      {meta.faqs.length > 0 && (
+        <section className="bg-white pb-20 lg:pb-24">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-8 text-center text-2xl font-bold uppercase tracking-tight text-gray-900 md:text-3xl">
+              Frequently Asked <span className="text-iptv-green">Questions</span>
+            </h2>
+            <div className="flex flex-col">
+              {meta.faqs.map((item) => (
+                <div key={item.question} className="border-b border-gray-100 py-5 last:border-b-0">
+                  <h3 className="mb-2 text-sm font-bold uppercase tracking-tight text-gray-900">
+                    {item.question}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-gray-500">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <CTA />
+    </main>
+  );
+}
