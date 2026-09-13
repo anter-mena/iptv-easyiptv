@@ -34,29 +34,27 @@ export const PRICES: Record<Currency, Record<DeviceCount, PriceRow>> = {
   },
 };
 
-const CURRENCY_SYMBOLS: Record<Currency, string> = { CAD: "$", USD: "$", EUR: "€" };
+/** Shown after the amount, so the two dollar currencies are never ambiguous. */
+const CURRENCY_SYMBOLS: Record<Currency, string> = { CAD: "$CA", USD: "$US", EUR: "€" };
 
 export function isCurrency(value: unknown): value is Currency {
   return (CURRENCIES as readonly unknown[]).includes(value);
 }
 
-/**
- * A price split for display: `amount` is "$19" / "€11.99" (whole prices drop
- * the ".00"), `code` labels the dollar currencies so "$19" is never ambiguous.
- */
+/** A price split for display: `amount` is "19" / "11.99" (whole prices drop the ".00"), `symbol` is "$CA" / "$US" / "€". */
 export function priceParts(price: number, currency: Currency) {
   const digits = Number.isInteger(price) ? 0 : 2;
-  const amount = `${CURRENCY_SYMBOLS[currency]}${price.toLocaleString("en-US", {
+  const amount = price.toLocaleString("en-US", {
     minimumFractionDigits: digits,
     maximumFractionDigits: digits,
-  })}`;
-  return { amount, code: currency === "EUR" ? null : currency };
+  });
+  return { amount, symbol: CURRENCY_SYMBOLS[currency] };
 }
 
-/** "$19 CAD", "$14.99 USD", "€11.99" */
+/** "19 $CA", "14.99 $US", "11.99 €" */
 export function formatPrice(price: number, currency: Currency): string {
-  const { amount, code } = priceParts(price, currency);
-  return code ? `${amount} ${code}` : amount;
+  const { amount, symbol } = priceParts(price, currency);
+  return `${amount} ${symbol}`;
 }
 
 /** Lowest and highest price in one currency, for structured data. */

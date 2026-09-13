@@ -132,7 +132,7 @@ export function Pricing() {
         {/* Plans Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 px-2 sm:px-0">
           {currentPlans.map((plan) => {
-            const { amount, code } = priceParts(plan.price, currency)
+            const { amount, symbol } = priceParts(plan.price, currency)
 
             return (
               <div
@@ -157,7 +157,7 @@ export function Pricing() {
                 </div>
                 <div className="mb-4 flex items-center justify-center">
                   <span className="text-3xl font-bold text-gray-900">{amount}</span>
-                  {code && <span className="ml-1 text-sm font-bold text-gray-500">{code}</span>}
+                  <span className="ml-1 text-sm font-bold text-gray-500">{symbol}</span>
                 </div>
                 <ul className="mb-6 flex-1 space-y-2.5 text-left">
                   {commonFeatures.map((feature) => (
