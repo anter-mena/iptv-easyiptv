@@ -1,5 +1,8 @@
 import { Metadata } from "next"
 import { Hero } from "@/components/home/home-hero"
+import { JsonLd } from "@/components/seo/json-ld"
+import { CURRENCIES, priceRange } from "@/lib/pricing"
+import { BASE_URL } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Easy IPTV | Premium Live TV, Sports & VOD Streaming Service",
@@ -18,31 +21,34 @@ import { FAQ } from "@/components/home/home-faq"
 import { Reviews } from "@/components/home/home-reviews"
 import { CTA } from "@/components/home/home-cta"
 
+// One price range per currency, matching the prices shown in the pricing section.
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Easy IPTV Subscription",
+  "description": "Premium IPTV subscription featuring thousands of live channels, VOD, movies, and TV shows in 4K/HD.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Easy IPTV"
+  },
+  "offers": CURRENCIES.map((currency) => {
+    const { low, high, count } = priceRange(currency)
+    return {
+      "@type": "AggregateOffer",
+      "url": `${BASE_URL}/#pricing`,
+      "priceCurrency": currency,
+      "lowPrice": low,
+      "highPrice": high,
+      "offerCount": count,
+      "availability": "https://schema.org/InStock"
+    }
+  })
+}
+
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Easy IPTV Subscription",
-            "description": "Premium IPTV subscription featuring thousands of live channels, VOD, movies, and TV shows in 4K/HD.",
-            "brand": {
-              "@type": "Brand",
-              "name": "Easy IPTV"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://easyiptv.ca/#pricing",
-              "priceCurrency": "USD",
-              "price": "14.99",
-              "availability": "https://schema.org/InStock"
-            }
-          })
-        }}
-      />
+      <JsonLd data={[productJsonLd]} />
       <Hero />
       <Features />
       <Experience />
