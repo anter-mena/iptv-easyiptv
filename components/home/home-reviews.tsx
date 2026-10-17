@@ -89,13 +89,13 @@ const ReviewCard = ({ img, id, isActive }: { img: string; id: number; isActive: 
           : "border-gray-200 opacity-30 scale-90 grayscale"
       )}
     >
-      <div className="relative aspect-[9/16] w-full overflow-hidden rounded-md">
+      <div className="relative aspect-[9/16] w-full overflow-hidden rounded-md bg-[#111]">
         <Image
           src={img}
           alt={`Customer Review ${id}`}
           fill
           className={cn(
-            "object-cover transition-all duration-700",
+            "object-contain transition-all duration-700",
             isActive ? "grayscale-0 opacity-100" : "grayscale opacity-80"
           )}
           sizes="(max-width: 768px) 50vw, 20vw"
