@@ -1,16 +1,9 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { Hero } from "@/components/home/home-hero"
 import { JsonLd } from "@/components/seo/json-ld"
 import { CURRENCIES, priceRange } from "@/lib/pricing"
-import { BASE_URL } from "@/lib/seo"
+import { BASE_URL, buildMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Easy IPTV | Premium Live TV, Sports & VOD Streaming Service",
-  description: "Experience the ultimate IPTV streaming service. Access 20,000+ live TV channels, sports, and 50,000+ VOD movies in 4K quality with no buffering.",
-  alternates: {
-    canonical: "/",
-  },
-}
 import { Features } from "@/components/home/home-features"
 import { Experience } from "@/components/home/home-experience"
 import { Pricing } from "@/components/home/home-pricing"
@@ -20,6 +13,13 @@ import { HowItWorks } from "@/components/home/home-how-it-works"
 import { FAQ } from "@/components/home/home-faq"
 import { Reviews } from "@/components/home/home-reviews"
 import { CTA } from "@/components/home/home-cta"
+
+export const metadata: Metadata = buildMetadata({
+  title: "Premium IPTV in Canada: Live TV, Sports & VOD",
+  description:
+    "Experience the ultimate IPTV streaming service. Access 20,000+ live TV channels, sports, and 50,000+ VOD movies in 4K quality with no buffering.",
+  path: "/",
+})
 
 // One price range per currency, matching the prices shown in the pricing section.
 const productJsonLd = {

@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { getAllPosts } from "@/lib/blog";
 import { getAllNews } from "@/lib/news";
+import { DEVICE_GUIDES, deviceGuideHref } from "@/lib/installation-guides";
 import { BASE_URL } from "@/lib/seo";
 
 // Each section is served at /sitemap/<section>.xml and listed by the index at /sitemap.xml
@@ -17,6 +18,8 @@ const pageLastModified = {
   about: "2026-06-14",
   contact: "2026-08-17",
   installationGuide: "2026-06-14",
+  // Each device guide got its own page on this date.
+  deviceGuides: "2026-10-18",
   faq: "2026-05-30",
   privacyPolicy: "2026-06-04",
   termsOfService: "2026-06-04",
@@ -104,6 +107,12 @@ export function getSitemapEntries(section: SitemapSection): MetadataRoute.Sitema
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...DEVICE_GUIDES.map((guide) => ({
+      url: `${BASE_URL}${deviceGuideHref(guide.slug)}`,
+      lastModified: toDate(pageLastModified.deviceGuides),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: `${BASE_URL}/faq`,
       lastModified: toDate(pageLastModified.faq),

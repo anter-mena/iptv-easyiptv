@@ -1,17 +1,12 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Frequently Asked Questions (FAQ) | Easy IPTV Support",
-  description: "Have questions about Easy IPTV? Read our comprehensive FAQ for answers regarding installation, billing, subscriptions, and supported devices.",
-  alternates: {
-    canonical: "/faq",
-  },
-  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
-    title: "Frequently Asked Questions (FAQ) | Easy IPTV Support",
-    description: "Have questions about Easy IPTV? Read our comprehensive FAQ for answers regarding installation, billing, subscriptions, and supported devices.",
-    url: "/faq",
-  },
-}
+export const metadata: Metadata = buildMetadata({
+  title: "IPTV FAQ: Installation, Billing & Devices",
+  description:
+    "Have questions about Easy IPTV? Read our comprehensive FAQ for answers regarding installation, billing, subscriptions, and supported devices.",
+  path: "/faq",
+})
 
 export default function FAQLayout({
   children,

@@ -1,6 +1,4 @@
-"use client"
-
-import * as React from"react"
+import Link from "next/link"
 import { 
  Tv, 
  Monitor, 
@@ -11,6 +9,7 @@ import {
  Router,
  Ban
 } from"lucide-react"
+import { deviceGuideHref } from "@/lib/installation-guides"
 import { cn } from"@/lib/utils"
 
 const devices = [
@@ -27,11 +26,11 @@ const devices = [
 ]
 
 interface DeviceSelectionProps {
- selectedId: string
- onSelect: (id: string) => void
+ /** The guide being viewed, highlighted in the grid. Omit on the hub page. */
+ selectedId?: string
 }
 
-export function InstallationDeviceSelection({ selectedId, onSelect }: DeviceSelectionProps) {
+export function InstallationDeviceSelection({ selectedId }: DeviceSelectionProps) {
  return (
  <section id="devices" className="bg-gray-50 py-16">
  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -50,9 +49,10 @@ export function InstallationDeviceSelection({ selectedId, onSelect }: DeviceSele
 
  <div className="grid gap-px overflow-hidden rounded-2xl border border-gray-200 bg-gray-200 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
  {devices.map((device) => (
- <button
+ <Link
  key={device.id}
- onClick={() => onSelect(device.id)}
+ href={deviceGuideHref(device.id)}
+ aria-current={selectedId === device.id ? "page" : undefined}
  className={cn(
 "group relative flex flex-col gap-4 p-6 text-left transition-all duration-500",
  selectedId === device.id 
@@ -96,7 +96,7 @@ export function InstallationDeviceSelection({ selectedId, onSelect }: DeviceSele
  {device.subtitle}
  </p>
  </div>
- </button>
+ </Link>
  ))}
  </div>
  </div>

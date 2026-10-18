@@ -185,7 +185,7 @@ export function SiteFooter() {
                 <Mail className="mb-2 h-5 w-5 text-iptv-green sm:mb-0" />
                 <div>
                   <div className="text-sm font-medium text-white">Email Support</div>
-                  <div className="text-sm text-gray-400">support@easyiptv.com</div>
+                  <div className="text-sm text-gray-400">support@easyiptv.ca</div>
                 </div>
               </div>
 

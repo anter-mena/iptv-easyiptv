@@ -31,7 +31,7 @@ export function Article({ post, section }: { post: Post; section: ArticleSection
       : `By the ${meta.author} · Updated ${formatDate(meta.updated)} · ${meta.readingTime} min read`;
 
   return (
-    <main className="flex-1 bg-white">
+    <div className="flex-1 bg-white">
       <JsonLd
         data={[
           breadcrumbJsonLd([
@@ -178,6 +178,6 @@ export function Article({ post, section }: { post: Post; section: ArticleSection
       )}
 
       <CTA />
-    </main>
+    </div>
   );
 }

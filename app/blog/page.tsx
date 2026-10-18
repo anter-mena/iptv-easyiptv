@@ -26,7 +26,7 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <main className="flex-1 bg-white">
+    <div className="flex-1 bg-white">
       <JsonLd
         data={[
           breadcrumbJsonLd([
@@ -58,6 +58,6 @@ export default function BlogPage() {
       />
 
       <CTA />
-    </main>
+    </div>
   );
 }

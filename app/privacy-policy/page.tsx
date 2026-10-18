@@ -1,23 +1,18 @@
 import { PageHero } from "@/components/ui/page-hero"
-import { Metadata } from "next"
+import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: "Privacy Policy - Data Protection & GDPR | Easy IPTV",
-  description: "Read the Easy IPTV Privacy Policy to understand how we securely collect, use, and protect your personal data in compliance with GDPR and CCPA regulations.",
-  alternates: {
-    canonical: "/privacy-policy",
-  },
-  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
-    title: "Privacy Policy - Data Protection & GDPR | Easy IPTV",
-    description: "Read the Easy IPTV Privacy Policy to understand how we securely collect, use, and protect your personal data in compliance with GDPR and CCPA regulations.",
-    url: "/privacy-policy",
-  },
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Privacy Policy",
+  description:
+    "Read the Easy IPTV Privacy Policy to understand how we securely collect, use, and protect your personal data in compliance with GDPR and CCPA regulations.",
+  path: "/privacy-policy",
+})
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="flex-1 bg-white">
+    <div className="flex-1 bg-white">
       <PageHero 
         title="Privacy Policy" 
         description="IPTV Streaming Service — Your Data, Your Rights" 
@@ -319,7 +314,7 @@ export default function PrivacyPolicyPage() {
                   Exercising Your Rights
                 </h4>
                 <p className="text-sm leading-relaxed text-gray-700 font-medium">
-                  To exercise any of these rights, please contact our Privacy Team at <a href="mailto:support@easyiptv.com" className="text-iptv-green hover:underline">support@easyiptv.com</a>. We will respond within 30 days (GDPR) or 45 days (CCPA). We may need to verify your identity before processing your request.
+                  To exercise any of these rights, please contact our Privacy Team at <a href="mailto:support@easyiptv.ca" className="text-iptv-green hover:underline">support@easyiptv.ca</a>. We will respond within 30 days (GDPR) or 45 days (CCPA). We may need to verify your identity before processing your request.
                 </p>
               </div>
             </div>
@@ -446,11 +441,11 @@ export default function PrivacyPolicyPage() {
               <div className="rounded-xl border border-gray-100 bg-gray-50 p-6 space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">Privacy Team:</span>
-                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
+                  <a href="mailto:support@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">General Support:</span>
-                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
+                  <a href="mailto:support@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">Website:</span>
@@ -470,6 +465,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

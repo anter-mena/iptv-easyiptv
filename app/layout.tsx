@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -20,13 +20,11 @@ export const metadata: Metadata = {
     template: "%s | Easy IPTV",
   },
   description: "The ultimate platform for easy and high-quality IPTV streaming. Access your favorite channels anywhere, anytime.",
-  keywords: ["IPTV", "streaming", "live tv", "easy iptv", "premium streaming"],
   authors: [{ name: "Easy IPTV Team" }],
   creator: "Easy IPTV Team",
   openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     type: "website",
-    locale: "en_US",
-    url: "/", 
+    locale: "en_CA",
     title: "Easy IPTV - Premium Streaming Experience",
     description: "The ultimate platform for easy and high-quality IPTV streaming.",
     siteName: "Easy IPTV",
@@ -44,7 +42,9 @@ export const metadata: Metadata = {
     "max-snippet": -1,
     "max-video-preview": -1,
   },
-  alternates: { canonical: "https://easyiptv.ca/" },
+};
+
+export const viewport: Viewport = {
   themeColor: "#7fa409",
 };
 

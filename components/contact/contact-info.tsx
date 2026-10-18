@@ -5,7 +5,7 @@ const contactItems = [
   {
     icon: Mail,
     title: "Email Support",
-    desc: "support@easyiptv.com",
+    desc: "support@easyiptv.ca",
     tag: "01 / Digital",
     sub: "Responds within 2h",
   },

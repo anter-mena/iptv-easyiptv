@@ -11,7 +11,7 @@ export default function FAQPage() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
 
   return (
-    <main className="flex-1 bg-white">
+    <div className="flex-1 bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -95,6 +95,6 @@ export default function FAQPage() {
 
         </div>
       </section>
-    </main>
+    </div>
   )
 }

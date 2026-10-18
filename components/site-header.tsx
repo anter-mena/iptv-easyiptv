@@ -8,14 +8,14 @@ import { Menu, X, ChevronDown, ChevronRight, Tv, Router, Smartphone, Monitor, La
 import { cn } from "@/lib/utils"
 
 const installationLinks = [
-  { title: "Amazon Firestick", href: "/installation-guide#fire-tv", icon: Zap },
-  { title: "IPTV Smarters Pro", href: "/installation-guide#windows", icon: Monitor },
-  { title: "Apple Devices", href: "/installation-guide#apple", icon: Smartphone },
-  { title: "Android Devices", href: "/installation-guide#android-phone", icon: Smartphone },
-  { title: "Smart TV/Not Android", href: "/installation-guide#smart-tv", icon: Tv },
-  { title: "Buzz TV Box", href: "/installation-guide#buzztv", icon: Router },
-  { title: "Formuler Z/Dreamlink", href: "/installation-guide#formuler", icon: HardDrive },
-  { title: "Roku Device", href: "/installation-guide#roku", icon: LayoutGrid },
+  { title: "Amazon Firestick", href: "/installation-guide/fire-tv", icon: Zap },
+  { title: "IPTV Smarters Pro", href: "/installation-guide/windows", icon: Monitor },
+  { title: "Apple Devices", href: "/installation-guide/apple", icon: Smartphone },
+  { title: "Android Devices", href: "/installation-guide/android-phone", icon: Smartphone },
+  { title: "Smart TV/Not Android", href: "/installation-guide/smart-tv", icon: Tv },
+  { title: "Buzz TV Box", href: "/installation-guide/buzztv", icon: Router },
+  { title: "Formuler Z/Dreamlink", href: "/installation-guide/formuler", icon: HardDrive },
+  { title: "Roku Device", href: "/installation-guide/roku", icon: LayoutGrid },
 ]
 
 export function SiteHeader() {
@@ -149,7 +149,7 @@ export function SiteHeader() {
                   aria-haspopup="true"
                   className={cn(
                     "flex items-center gap-1 py-2 pl-5 text-sm font-medium transition-colors focus:outline-none",
-                    isActive("/installation-guide") || activeDropdown === 'installation' ? "text-iptv-green after:scale-x-100" : "text-gray-500 hover:text-gray-900 after:scale-x-0 hover:after:scale-x-100",
+                    pathname.startsWith("/installation-guide") || activeDropdown === 'installation' ? "text-iptv-green after:scale-x-100" : "text-gray-500 hover:text-gray-900 after:scale-x-0 hover:after:scale-x-100",
                     "after:absolute after:bottom-0 after:left-5 after:right-4 after:h-0.5 after:bg-iptv-green after:transition-transform after:duration-300"
                   )}
                 >

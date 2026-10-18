@@ -22,8 +22,8 @@ import {
 
 const commonFeatures = [
   "4K Ultra HD Streaming Quality",
-  "25,000+ Live Channels Worldwide",
-  "120,000+ Movies & TV Shows",
+  "20,000+ Live Channels Worldwide",
+  "50,000+ Movies & TV Shows",
   "Premium PPV Events Included",
   "Instant VOD Access",
   "Smart EPG & Catch-Up TV",

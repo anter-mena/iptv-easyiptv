@@ -2,24 +2,19 @@ import { ContactHero } from "@/components/contact/contact-hero"
 import { ContactForm } from "@/components/contact/contact-form"
 import { ContactInfo } from "@/components/contact/contact-info"
 import { ContactMethods } from "@/components/contact/contact-methods"
-import { Metadata } from "next"
+import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Contact Easy IPTV Support | 24/7 Customer Service Team",
-  description: "Get in touch with Easy IPTV support. We are here 24/7 to help you with installation, billing, technical questions, and choosing the right plan.",
-  alternates: {
-    canonical: "/contact",
-  },
-  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
-    title: "Contact Easy IPTV Support | 24/7 Customer Service Team",
-    description: "Get in touch with Easy IPTV support. We are here 24/7 to help you with installation, billing, technical questions, and choosing the right plan.",
-    url: "/contact",
-  },
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Contact 24/7 IPTV Support",
+  description:
+    "Get in touch with Easy IPTV support. We are here 24/7 to help you with installation, billing, technical questions, and choosing the right plan.",
+  path: "/contact",
+})
 
 export default function ContactPage() {
   return (
-    <main className="flex-1">
+    <div className="flex-1">
       <ContactHero />
       
       <section className="bg-white py-20">
@@ -34,6 +29,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

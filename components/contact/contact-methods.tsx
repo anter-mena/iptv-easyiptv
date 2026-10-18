@@ -14,7 +14,7 @@ const methods = [
     description: "Send us an email and we'll respond within 2 hours. Perfect for detailed questions.",
     icon: Mail,
     action: "Send Email",
-    href: "mailto:support@easyiptv.com",
+    href: "mailto:support@easyiptv.ca",
   },
   {
     title: "Phone Support",

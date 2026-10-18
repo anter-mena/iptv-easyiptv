@@ -104,7 +104,7 @@ export function articleJsonLd(meta: PostMeta, section: ArticleSection) {
     description: meta.description,
     datePublished: meta.date,
     dateModified: meta.updated,
-    ...(meta.image ? { image: meta.image } : {}),
+    ...(meta.image ? { image: meta.image.startsWith("/") ? `${BASE_URL}${meta.image}` : meta.image } : {}),
     author: { "@type": "Organization", name: meta.author },
     publisher: {
       "@type": "Organization",

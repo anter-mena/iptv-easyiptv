@@ -1,23 +1,18 @@
 import { PageHero } from "@/components/ui/page-hero"
-import { Metadata } from "next"
+import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
 import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: "Terms of Service & User Agreements | Easy IPTV Canada",
-  description: "Review the Easy IPTV Terms of Service. Discover the rules, usage guidelines, and legal agreements for accessing our premium live TV streaming platform.",
-  alternates: {
-    canonical: "/terms-of-service",
-  },
-  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
-    title: "Terms of Service & User Agreements | Easy IPTV Canada",
-    description: "Review the Easy IPTV Terms of Service. Discover the rules, usage guidelines, and legal agreements for accessing our premium live TV streaming platform.",
-    url: "/terms-of-service",
-  },
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Terms of Service",
+  description:
+    "Review the Easy IPTV Terms of Service. Discover the rules, usage guidelines, and legal agreements for accessing our premium live TV streaming platform.",
+  path: "/terms-of-service",
+})
 
 export default function TermsPage() {
   return (
-    <main className="flex-1 bg-white">
+    <div className="flex-1 bg-white">
       <PageHero 
         title="Terms of Service" 
         description="IPTV Streaming Service — Rules, Rights & Responsibilities" 
@@ -188,7 +183,7 @@ export default function TermsPage() {
                 All subscription payments and used credits are final and non-refundable, except where required by applicable consumer protection law. Once a subscription period has commenced, no partial refunds will be issued for unused time. We strongly encourage you to review your plan details and take advantage of any free trial periods before committing to a paid subscription.
               </p>
               <p className="text-sm leading-relaxed text-gray-500">
-                If you believe a charge was made in error, please contact our billing team within 7 days of the charge at <a href="mailto:support@easyiptv.com" className="font-bold text-iptv-green hover:underline">support@easyiptv.com</a>.
+                If you believe a charge was made in error, please contact our billing team within 7 days of the charge at <a href="mailto:support@easyiptv.ca" className="font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>.
               </p>
             </div>
 
@@ -330,7 +325,7 @@ export default function TermsPage() {
                   "Use a strong, unique password and enable two-factor authentication (2FA) where available",
                   "Never share your username or password with any other person",
                   "Log out of shared or public devices after each session",
-                  "Notify us immediately at support@easyiptv.com if you suspect unauthorized access"
+                  "Notify us immediately at support@easyiptv.ca if you suspect unauthorized access"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start space-x-3">
                     <div className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-iptv-green" />
@@ -630,15 +625,15 @@ export default function TermsPage() {
               <div className="rounded-xl border border-gray-100 bg-gray-50 p-6 space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">General Support:</span>
-                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
+                  <a href="mailto:support@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">Billing Queries:</span>
-                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
+                  <a href="mailto:support@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">Legal & Compliance:</span>
-                  <a href="mailto:support@easyiptv.com" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.com</a>
+                  <a href="mailto:support@easyiptv.ca" className="text-sm font-bold text-iptv-green hover:underline">support@easyiptv.ca</a>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-900 sm:w-48">Website:</span>
@@ -658,6 +653,6 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
